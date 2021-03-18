@@ -1,0 +1,22 @@
+{
+  "name": "www.jd.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/GUOXinHu/jd.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GUOXinHu/jd.com/issues"
+  },
+  "homepage": "https://github.com/GUOXinHu/jd.com#readme",
+  "description": ""
+}

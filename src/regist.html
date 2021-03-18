@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>京东-个人注册</title>
+  <link rel="Shortcut Icon" href="./img/titlelogo.png" />
+  <link rel="stylesheet" href="./css/regist.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <script src="./js/footer.js" type="module"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="main-box">
+      <div class="logo">
+        <a href="./index.html" class="logo-img"></a>
+        <h2 class="logo-title">欢迎注册</h2>
+      </div>
+      <div class="login">
+        <span>已有账号?&nbsp;</span>
+        <a href="./login.html" class="login-link">请登录></a>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="main-box">
+      <div class="step-box">
+        <div class="step step-active">
+          <div class="num">1</div>
+          <div class="title">验证手机号</div>
+        </div>
+        <div class="line line1"></div>
+        <div class="step">
+          <div class="num">2</div>
+          <div class="title">填写账户信息</div>
+        </div>
+        <div class="line line2"></div>
+        <div class="step">
+          <div class="num">3</div>
+          <div class="title">注册成功</div>
+        </div>
+      </div>
+      <div class="step-form">
+        <div class="verify-phone">
+          <div class="phone verifyBox">
+            <div class="phonebox">
+              <select name="areaCode" id="areaCode" class="areaCode">
+                <option selected><span>中国 </span>0086</option>
+                <option><span>中国台湾 </span>0886</option>
+                <option><span>中国香港 </span>0852</option>
+              </select>
+              <input type="text" class="phoneNum" name="phoneNum" placeholder="建议使用常用手机号"><span></span>
+            </div>
+            <div class="verifyHint"></div>
+          </div>
+          <div class="verifyBtn verifyBox">
+            <button class="btn">点击按钮进行验证</button>
+            <div class="verifyHint"></div>
+          </div>
+          <button class="next">下一步</button>
+        </div>
+        <div class="step-other">
+          <div class="firm"><span class="iconfont">&#xe751;</span><a href="#">企业用户注册</a></div>
+          <div class="overseas"><span class="iconfont">&#xe618;</span><a href="#">海外用户注册</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+@charset 'utf-8';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 110px;
+  font-size: 16px;
+  line-height: 110px;
+  background: url(../img/headbg.jpg) repeat-x bottom;
+
+  .main-box {
+    margin: 0 154.6px;
+
+    .logo {
+      float: left;
+
+      .logo-img {
+        display: inline-block;
+        width: 160px;
+        height: 50px;
+        margin-bottom: 10px;
+        background: url(../img/icon.png) no-repeat;
+        vertical-align: middle;
+      }
+
+      .logo-title {
+        height: 50px;
+        display: inline-block;
+        vertical-align: top;
+        font-weight: normal;
+      }
+    }
+
+    .login {
+      float: right;
+      margin-top: 15px;
+
+      span {
+        color: #999;
+      }
+
+      .login-link {
+        color: red;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.main {
+  .main-box {
+    margin: 80px 154.6px 0;
+
+    .step-box {
+      width: 400px;
+      height: 55px;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+
+      .step {
+        font-size: 12px;
+        text-align: center;
+        color: #999;
+
+        .num {
+          width: 24px;
+          height: 24px;
+          line-height: 24px;
+          margin: 0 auto;
+          border: 1px solid #999;
+          border-radius: 50%;
+        }
+
+        .title {
+          margin-top: 10px;
+        }
+      }
+
+      .step-active {
+        color: #3b4;
+
+        .num {
+          background-color: #3b4;
+          color: #fff;
+          font-weight: 600;
+        }
+      }
+
+
+
+      .line {
+        width: 124px;
+        height: 10px;
+        background: url(../img/reg-icon.png) no-repeat 0 -100px;
+        position: absolute;
+        top: 7px;
+      }
+
+      .line1 {
+        position: absolute;
+        left: 55px;
+      }
+
+      .line2 {
+        position: absolute;
+        left: 230px;
+      }
+    }
+
+    .step-form {
+      width: 400px;
+      margin: 50px auto 186px;
+
+      .verifyBox {
+        height: 86px;
+
+        .areaCode,
+        .btn {
+          cursor: pointer;
+        }
+
+        .areaCode,
+        .phoneNum,
+        .btn {
+          height: 54px;
+          border: 1px solid #ddd;
+          outline: none;
+        }
+
+        .phonebox:hover .areaCode {
+          border: 1px solid #666;
+        }
+
+        .phonebox:hover .phoneNum {
+          border: 1px solid #666;
+          border-left: 0;
+        }
+
+        .areaCode {
+          float: left;
+          width: 110px;
+          border-right: 0;
+          text-align: center;
+          text-align-last: center;
+        }
+
+        .phoneNum {
+          float: left;
+          width: 290px;
+          padding-left: 20px;
+        }
+
+        .btn {
+          width: 400px;
+          text-align: center;
+          background-color: #fff;
+        }
+
+        .btn:hover {
+          border: 1px solid #666;
+        }
+
+
+        .verifyHint {
+          height: 32px;
+        }
+      }
+
+      .next {
+        width: 100%;
+        height: 54px;
+        border: 0;
+        text-align: center;
+        color: white;
+        background-color: #e2231a;
+        margin-top: 20px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .next:hover {
+        background-color: #c81623;
+      }
+    }
+
+
+    .step-other {
+      width: 100%;
+      height: 28px;
+      line-height: 28px;
+      margin-top: 28px;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        font-size: 14px;
+        color: #333;
+        text-decoration: none;
+
+      }
+
+      .iconfont {
+        color: #d4d4d4;
+        font-size: 30px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+
+      .firm .iconfont {
+        font-size: 32px;
+        vertical-align: baseline;
+        margin-right: 8px;
+      }
+
+      a:hover {
+        color: #c81623;
+      }
+    }
+  }
+
+}
