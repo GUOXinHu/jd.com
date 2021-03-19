@@ -9,6 +9,7 @@
     <link rel="Shortcut Icon" href="./img/titlelogo.png" />
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
 </head>
 
 <body>
@@ -24,6 +25,7 @@
         <!-- 顶部导航 -->
         <div class="topNav">
             <div class="widthBox navflex">
+                <!-- 选址 -->
                 <div class="addressBox">
                     <span class="iconfont">&#xe63e;</span>
                     <div class="address">北京</div>
@@ -65,6 +67,7 @@
                         <li><a href="#">海外</a></li>
                     </ul>
                 </div>
+                <!-- 导航栏 -->
                 <div class="navUl">
                     <ul class="navList">
                         <li class="navLi navLiNo"><a href="./login.html">你好，请登录</a></li>
@@ -316,24 +319,540 @@
             </div>
         </div>
         <!-- 头部模块 -->
-        <div class="headerBox widthBox">
-            1
+        <div class="headerBox">
+            <div class="widthBox">
+                <div class="logo"></div>
+                <div class="search">
+                    <!-- 搜索框 -->
+                    <div class="form">
+                        <!-- 搜索提示 -->
+                        <ul class="searchHelp"></ul>
+                        <!-- 搜索框占位符 -->
+                        <div class="searchPlace">对开门冰箱</div>
+                        <input type="text" class="text">
+                        <div class="photoSearch">
+                            <a href="./login.html" class="iconfont">&#xe60c;</a>
+                        </div>
+                        <!-- 搜索按钮 -->
+                        <button class="btn">
+                            <i class="iconfont">&#xe613;</i>
+                        </button>
+                    </div>
+                    <!-- 我的购物车 -->
+                    <div class="myCart">
+                        <i class="iconfont">&#xe65f;</i>
+                        <span>99</span>
+                        <a href="./shop.html">我的购物车</a>
+                    </div>
+                </div>
+                <!-- 热搜词 -->
+                <div class="hotword">
+                    <ul class="list">
+                        <li><a href="">健康好睡眠</a></li>
+                        <li><a href="">健康助眠</a></li>
+                        <li><a href="">春耕节</a></li>
+                        <li><a href="">低至9.9</a></li>
+                        <li><a href="">开学福利</a></li>
+                        <li><a href="">睡眠节</a></li>
+                        <li><a href="">电信星卡</a></li>
+                        <li><a href="">1元试用</a></li>
+                        <li><a href="">轻食</a></li>
+                    </ul>
+                </div>
+                <!-- 导航菜单 -->
+                <div class="navitems">
+                    <ul class="group">
+                        <li><a href="#" class="focus">秒杀</a></li>
+                        <li><a href="#" class="focus">优惠券</a></li>
+                        <li><a href="#">PLUS会员</a></li>
+                        <li><a href="#">品牌闪购</a></li>
+                        <li><a href="#"><span>拍卖</span>
+                                <img src="./img/inavroll.png" alt="" class="roll">
+                            </a></li>
+                        <li><a href="#">京东家电</a></li>
+                        <li><a href="#">京东超市</a></li>
+                        <li><a href="#">京东生鲜</a></li>
+                        <li><a href="#">京东国际</a></li>
+                        <li><a href="#">京东金融</a></li>
+                    </ul>
+                </div>
+                <!-- 推广图片 -->
+                <div class="promo">
+                    <a href="#" class="promolink"></a>
+                </div>
+            </div>
         </div>
         <!-- 轮播模块 -->
-        <div class="widthBox">
+        <div class=" widthBox bar">
+            <!-- 左子导航 -->
+            <div class="leftsidebar">
+                <ul class="menu">
+                    <li><a href="#">家用电器</a></li>
+                    <li>
+                        <a href="#">手机</a>
+                        <span>/</span>
+                        <a href="">运营商</a>
+                        <span>/</span>
+                        <a href="">数码</a>
+                    </li>
+                    <li><a href="#">电脑</a>
+                        <span>/</span>
+                        <a href="">办公</a>
+                    </li>
+                    <li><a href="#">家居</a>
+                        <span>/</span>
+                        <a href="">家具</a>
+                        <span>/</span>
+                        <a href="">家装</a>
+                        <span>/</span>
+                        <a href="">厨具</a>
+                    </li>
+                    <li><a href="#">男装</a>
+                        <span>/</span>
+                        <a href="">女装</a>
+                        <span>/</span>
+                        <a href="">童装</a>
+                        <span>/</span>
+                        <a href="">内衣</a>
+                    </li>
+                    <li><a href="#">美妆</a>
+                        <span>/</span>
+                        <a href="">个护清洁</a>
+                        <span>/</span>
+                        <a href="">宠物</a>
+                    </li>
+                    <li><a href="#">女鞋</a>
+                        <span>/</span>
+                        <a href="">箱包</a>
+                        <span>/</span>
+                        <a href="">钟表</a>
+                        <span>/</span>
+                        <a href="">珠宝</a>
+                    </li>
+                    <li><a href="#">男鞋</a>
+                        <span>/</span>
+                        <a href="">运动</a>
+                        <span>/</span>
+                        <a href="">户外</a>
+                    </li>
+                    <li><a href="#">房产</a>
+                        <span>/</span>
+                        <a href="">汽车</a>
+                        <span>/</span>
+                        <a href="">汽车用品</a>
+                    </li>
+                    <li><a href="#">母婴</a>
+                        <span>/</span>
+                        <a href="">玩具乐器</a>
+                    </li>
+                    <li><a href="#">食品</a>
+                        <span>/</span>
+                        <a href="">酒类</a>
+                        <span>/</span>
+                        <a href="">生鲜</a>
+                        <span>/</span>
+                        <a href="">特产</a>
+                    </li>
+                    <li><a href="#">艺术</a>
+                        <span>/</span>
+                        <a href="">礼品鲜花</a>
+                        <span>/</span>
+                        <a href="">农贸绿植</a>
+                    </li>
+                    <li><a href="#">医药保健</a>
+                        <span>/</span>
+                        <a href="">计生情趣</a>
+                    </li>
+                    <li><a href="#">图书</a>
+                        <span>/</span>
+                        <a href="">文娱</a>
+                        <span>/</span>
+                        <a href="">教育</a>
+                        <span>/</span>
+                        <a href="">电子书</a>
+                    </li>
+                    <li><a href="#">机票</a>
+                        <span>/</span>
+                        <a href="">酒店</a>
+                        <span>/</span>
+                        <a href="">旅游</a>
+                        <span>/</span>
+                        <a href="">生活</a>
+                    </li>
+                    <li><a href="#">理财</a>
+                        <span>/</span>
+                        <a href="">众筹</a>
+                        <span>/</span>
+                        <a href="">白条</a>
+                        <span>/</span>
+                        <a href="">保险</a>
+                    </li>
+                    <li><a href="#">安装</a>
+                        <span>/</span>
+                        <a href="">维修</a>
+                        <span>/</span>
+                        <a href="">清洗</a>
+                        <span>/</span>
+                        <a href="">二手</a>
+                    </li>
+                    <li><a href="#">工业品</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 轮播图 -->
             <div class="bannerBox">
-                轮播模块
+                <div class="banner">
+                    <div class="swiper-container banner">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/ibanner01.jpg.webp" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/ibanner02.jpg.webp" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/ibanner03.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/ibanner04.jpg.webp" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/ibanner05.jpg" alt=""></div>
+                        </div>
+                        <!-- 分页器 -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- 导航按钮 -->
+                        <div class="swiper-button-prev"><i class="iconfont">&#xe64c;</i></div>
+                        <div class="swiper-button-next"><i class="iconfont">&#xe64d;</i></div>
+                    </div>
+                </div>
+                <div class="rightbanner">
+                    <div class="swiper-container barright-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/irbar01.jpg.webp" alt="">
+                                <img src="./img/irbar02.jpg.webp" alt="">
+                                <img src="./img/irbar03.jpg.webp" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/irbar04.jpg.webp" alt="">
+                                <img src="./img/irbar05.jpg.webp" alt="">
+                                <img src="./img/irbar06.jpg.webp" alt="">
+                            </div>
+                        </div>
+                        <!-- 导航按钮 -->
+                        <div class="swiper-button-prev"><i class="iconfont">&#xe64c;</i></div>
+                        <div class="swiper-button-next"><i class="iconfont">&#xe64d;</i></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧变栏 -->
+            <div class="rightsidebar">
+                <div class="top br">
+                    <div class="user">
+                        <div class="userimg">
+                            <a href="./login.html"><img src="./img/headerphone.png" alt=""></a>
+                        </div>
+                        <div class="usershow">
+                            <div>
+                                <a href="#">Hi~欢迎逛京东！</a></div>
+                            <div>
+                                <a href="./login.html">登录</a>
+                                <span> | </span>
+                                <a href="./regist.html">注册</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userlink">
+                        <a href="">新人福利</a>
+                        <a href="">PLUS会员</a>
+                    </div>
+                </div>
+                <div class="news br">
+                    <div class="newsHd">
+                        <h5>京东快报</h5>
+                        <a href="#">更多&nbsp;></a>
+                    </div>
+                    <ul class="newsList">
+                        <li class="newsItem"><a href="#"><span class="newsTag">热门</span>苒后神经酰胺面霜，让肌肤整日水感无负担</a></li>
+                        <li class="newsItem"><a href="#"><span class="newsTag">热议</span>翩翩君子，谁人不爱？古井贡酒老瓷贡温润前来</a></li>
+                        <li class="newsItem"><a href="#"><span class="newsTag">推荐</span>30系显卡开启升级热潮，不过游戏主机升级可别只看显卡</a>
+                        </li>
+                        <li class="newsItem"><a href="#"><span class="newsTag">热门</span>李宁跳绳陪你一起健身塑型，燃烧身体的卡路里</a></li>
+                    </ul>
+                </div>
+                <div class="subnav">
+                    <ul class="subnavList">
+                        <li><a href="#"> <i class="iconfont">&#xe639;</i><span> 话费</span></a></li>
+                        <li><a href="#"> <i class="iconfont">&#xe63b;</i><span> 机票</span></a></li>
+                        <li><a href="#"> <i class="iconfont">&#xe614;</i><span> 酒店</span></a></li>
+                        <li><a href="#"> <i class="iconfont">&#xe680;</i><span> 游戏</span></a></li>
+                        <li><a href="#"> <i class="iconfont">&#xe627;</i><span> 加油卡</span></a></li>
+                        <li><a href="#"> <i class="iconfont">&#xe621;</i><span> 火车票</span></a></li>
+                        <li><a href="#"> <i class="iconfont">&#xe6c9;</i><span> 众筹</span></a></li>
+                        <li><a href="#"> <i class="iconfont">&#xe624;</i><span> 理财</span></a></li>
+                        <li><a href="#"> <i class="iconfont">&#xe632;</i><span> 白条</span></a></li>
+                        <li><a href="#"> <i class="iconfont">&#xe620;</i><span> 电影票</span></a></li>
+                        <li><a href="#"> <i class="iconfont">&#xe608;</i><span> 企业购</span></a></li>
+                        <li><a href="#"> <i class="iconfont">&#xe630;</i><span> 礼品卡</span></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <!-- 1190主体 -->
         <div class="mainBox widthBox">
             <!-- 京东秒杀 -->
             <div class="seckillBox">
-                京东秒杀
+                <a href="#" class="seckillCountDown">
+                    <h2>京东秒杀</h2>
+                    <div class="time"><b>18:00</b>点场 倒计时</div>
+                    <div class="countDown">
+                        <span class="hour">01</span>
+                        <span class="colon">:</span>
+                        <span class="minute">22</span>
+                        <span class="colon">:</span>
+                        <span class="second">11</span>
+                    </div>
+                </a>
+                <div class="seckillList">
+                    <div class="swiper-container barright-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <img src="./img/iseckillbanner01.jpg.webp" alt="">
+                                    <h6>帮宝适 绿帮 纸尿裤 尿不湿NB140(0-5kg)新生儿纸尿裤尿不湿瞬吸干爽</h6>
+                                    <div class="itemPrice">
+                                        <span class="seckillPrice">
+                                            <i>¥</i>
+                                            <span>59.00</span>
+                                        </span>
+                                        <span class="originPrice">
+                                            <i>¥</i>
+                                            <span>199.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./img/iseckillbanner02.jpg.webp" alt="">
+                                    <h6>惠氏启赋（Wyeth illuma）亲和人体幼儿配方奶粉3段（12-36月适用） 900克 爱尔兰原装进口（蓝钻启赋）</h6>
+                                    <div class="itemPrice">
+                                        <span class="seckillPrice">
+                                            <i>¥</i>
+                                            <span>16.00</span>
+                                        </span>
+                                        <span class="originPrice">
+                                            <i>¥</i>
+                                            <span>19.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./img/iseckillbanner03.jpg.webp" alt="">
+                                    <h6>双星跑步鞋男鞋春季网面飞织透气轻质减震气垫慢跑鞋基础百搭休闲运动鞋 M9055 酷黑 42</h6>
+                                    <div class="itemPrice">
+                                        <span class="seckillPrice">
+                                            <i>¥</i>
+                                            <span>169.00</span>
+                                        </span>
+                                        <span class="originPrice">
+                                            <i>¥</i>
+                                            <span>199.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./img/iseckillbanner04.jpg.webp" alt="">
+                                    <h6>狮峰2021新茶上市预定 龙井茶叶西湖绿茶明前特级龙井茶50g罐装自饮 鲜爽甘醇 </h6>
+                                    <div class="itemPrice">
+                                        <span class="seckillPrice">
+                                            <i>¥</i>
+                                            <span>39.00</span>
+                                        </span>
+                                        <span class="originPrice">
+                                            <i>¥</i>
+                                            <span>69.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <img src="./img/iseckillbanner05.jpg.webp" alt="">
+                                    <h6>颐佳爱床垫 泰国天然乳胶床垫 200*180*5cm单人/双人床垫床褥子 泰然</h6>
+                                    <div class="itemPrice">
+                                        <span class="seckillPrice">
+                                            <i>¥</i>
+                                            <span>1159.00</span>
+                                        </span>
+                                        <span class="originPrice">
+                                            <i>¥</i>
+                                            <span>1299.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./img/iseckillbanner06.jpg.webp" alt="">
+                                    <h6>狮峰2021新茶上市预定 龙井茶叶西湖绿茶明前特级龙井茶50g罐装自饮 鲜爽甘醇 </h6>
+                                    <div class="itemPrice">
+                                        <span class="seckillPrice">
+                                            <i>¥</i>
+                                            <span>256.00</span>
+                                        </span>
+                                        <span class="originPrice">
+                                            <i>¥</i>
+                                            <span>399.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./img/iseckillbanner07.jpg.webp" alt="">
+                                    <h6>帮宝适 绿帮 纸尿裤 尿不湿NB140(0-5kg)新生儿纸尿裤尿不湿瞬吸干爽</h6>
+                                    <div class="itemPrice">
+                                        <span class="seckillPrice">
+                                            <i>¥</i>
+                                            <span>89.00</span>
+                                        </span>
+                                        <span class="originPrice">
+                                            <i>¥</i>
+                                            <span>199.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./img/iseckillbanner08.jpg.webp" alt="">
+                                    <h6>MOKO.MAX 意大利运动护膝户外跑步篮球足球羽毛球男女半月板损伤护具装备深蹲登山护腿髌骨带一只装 M码 体重≥60KG（大腿围37CM-53CM）</h6>
+                                    <div class="itemPrice">
+                                        <span class="seckillPrice">
+                                            <i>¥</i>
+                                            <span>229.00</span>
+                                        </span>
+                                        <span class="originPrice">
+                                            <i>¥</i>
+                                            <span>369.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <img src="./img/iseckillbanner09.jpg.webp" alt="">
+                                    <h6>【二手9成新】戴尔DELL E7240/E7250/E7270 二手笔记本i5/i7 超薄本 商务本 1】酷睿双核 4G内存 500G硬盘</h6>
+                                    <div class="itemPrice">
+                                        <span class="seckillPrice">
+                                            <i>¥</i>
+                                            <span>5889.00</span>
+                                        </span>
+                                        <span class="originPrice">
+                                            <i>¥</i>
+                                            <span>9999.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./img/iseckillbanner10.jpg.webp" alt="">
+                                    <h6>丹尼尔惠灵顿（DanielWellington）DW手表男女同款情侣表36mm金边黑色表盘金属表带欧美表DW00100307</h6>
+                                    <div class="itemPrice">
+                                        <span class="seckillPrice">
+                                            <i>¥</i>
+                                            <span>168.00</span>
+                                        </span>
+                                        <span class="originPrice">
+                                            <i>¥</i>
+                                            <span>219.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./img/iseckillbanner11.jpg.webp" alt="">
+                                    <h6>索尼（SONY）Xperia1 II 5G智能手机 4K屏 骁龙865 12G+256G 微单技术 蔡司镀膜 拍照游戏 20帧/秒 夜砚黑</h6>
+                                    <div class="itemPrice">
+                                        <span class="seckillPrice">
+                                            <i>¥</i>
+                                            <span>2299.00</span>
+                                        </span>
+                                        <span class="originPrice">
+                                            <i>¥</i>
+                                            <span>3999.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./img/iseckillbanner12.jpg.webp" alt="">
+                                    <h6>菜鸟文化 善琏湖笔文房四宝礼品套装之笔架套装 含6支常用毛笔+笔搁+礼品 鸡翅木双龙笔架套装</h6>
+                                    <div class="itemPrice">
+                                        <span class="seckillPrice">
+                                            <i>¥</i>
+                                            <span>369.00</span>
+                                        </span>
+                                        <span class="originPrice">
+                                            <i>¥</i>
+                                            <span>669.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 导航按钮 -->
+                        <div class="swiper-button-prev"><i class="iconfont">&#xe64c;</i></div>
+                        <div class="swiper-button-next"><i class="iconfont">&#xe64d;</i></div>
+                    </div>
+                </div>
+                <div class="seckillBrand">
+                    <div class="swiper-container banner">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/iseckillright01.webp" alt="">
+                                <div class="item">
+                                    <div class="title">天语品牌秒杀专场</div>
+                                    <div class="promo">全场低至99元</div>
+                                    <div class="btn">品牌秒杀 ></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/iseckillright02.jpg.webp" alt="">
+                                <div class="item">
+                                    <div class="title">女装春款秒杀日</div>
+                                    <div class="promo">爆款低至5折</div>
+                                    <div class="btn">品牌秒杀 ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 分页器 -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev" style="display: none;"><i class="iconfont">&#xe64c;</i></div>
+                        <div class="swiper-button-next" style="display: none;"><i class="iconfont">&#xe64d;</i></div>
+                    </div>
+                </div>
             </div>
-            <!-- 活动2模块 -->
-            <div class="activ2card">
-                活动2模块
+            <!-- 特色优选 -->
+            <div class="trait">
+                <div class="trait1">
+                    <div class="sale">
+                        <div class="saleHd">
+                            <a href="#">
+                                <h3>每日特价</h3>
+                                <span>＞</span>
+                            </a>
+                            <ul class="saleList">
+                                <li><a href="#">精选</a></li>
+                                <li><a href="#">美食</a></li>
+                                <li><a href="#">百货</a></li>
+                                <li><a href="#">个护</a></li>
+                                <li><a href="#">预告</a></li>
+                            </ul>
+                        </div>
+                        <div class="saleBox">
+                            1
+                        </div>
+                        <div class="saleBox">
+                            2
+                        </div>
+                        <div class="saleBox">
+                            3
+                        </div>
+                        <div class="saleBox">
+                            4
+                        </div>
+                        <div class="saleBox">
+                            5
+                        </div>
+                    </div>
+                    <div class="gilt"></div>
+                </div>
+                <div class="trait2"></div>
+                <div class="trait3"></div>
             </div>
             <!-- 发现好物 -->
             <div class="finegoods">
@@ -370,6 +889,9 @@
             </div>
         </div>
     </div>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/library/jquery.js"></script>
+    <script src="./js/library/swiper.jquery.min.js"></script>
 </body>
 
 </html>
