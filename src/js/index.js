@@ -32,11 +32,12 @@ var mySwiper = new Swiper ('.banner', {
     
   })
 
+  //DOM操作
   $(function() {
-      //countDown
+      //秒杀倒计时
       let hour,minute,second,timer;
       let time = new Date();
-      time.setHours(22);
+      time.setHours(18);
       time.setMinutes(0);
       time.setSeconds(0);
       let countDown = (time - Date.now()) / 1000;
@@ -56,4 +57,62 @@ var mySwiper = new Swiper ('.banner', {
           $('.countDown>.minute').html('00');
           $('.countDown>.second').html('00');
       }
+
+      //每日特价tab
+      let  traitLi= $('.trait1 .sale .saleHd .tab_head li');
+      traitLi.on('mouseover',function(){
+        let index = traitLi.index(this);
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.trait1 .tab_body .item').eq(index).addClass('item_show').siblings().removeClass('item_show');
+      });
+
+
+      //商品渲染
+      //通过Ajax请求商品图片 标题 价格
+      $.ajax({
+        type: "get",
+        url: "../interface/index.php",
+        dataType: "json",
+        success: function (res) {
+          let list = $('.recommendBox .product .list');
+          let temp = '';
+          res.forEach(el => {
+            let pricture = JSON.parse(el.pricture);
+            let selfRun = +el.self_run ? '&nbsp;自营&nbsp;' : '';
+            let plusPrice = +el.plus_price ? `¥${el.plus_price}.00` : '';
+            let plusShow = plusPrice ? ' plus_show' : '';
+            temp += `
+              <li class="item">
+                <a href="">
+                    <img src="./img/${pricture.pro}" alt="">
+                    <div class="title">
+                        <span class="self-run">${selfRun}</span>
+                        ${el.title}
+                    </div>
+                    <div class="price">
+                        <i class="price_before">¥</i>
+                        <span>${el.price}.</span>
+                        <i class="price_after">00</i>
+                        <div class="plus${plusShow}">
+                          <span class="plus_price">${plusPrice}</span>
+                          <span class="plus_name">PLUS</span>
+                        </div>
+                    </div>
+                    <div class="item_hover">
+                        <div class="cancel">×</div>
+                        <div class="seek">
+                            <i class="iconfont">&#xe681;</i>
+                            <span>找相似</span>
+                        </div>
+                    </div>
+                </a>
+              </li>`;
+          });
+          //将数据写到页面
+          list.html(temp);
+          
+        }
+      });
+
+
   })
