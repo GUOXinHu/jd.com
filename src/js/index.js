@@ -32,6 +32,21 @@ var mySwiper = new Swiper ('.banner', {
     
   })
 
+  //新品首发
+  let newArrivalSwiper = new Swiper('.new-arrival-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    // 如果需要前进后退按钮
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+  });
+
   //DOM操作
   $(function() {
       //秒杀倒计时
@@ -65,6 +80,60 @@ var mySwiper = new Swiper ('.banner', {
         $(this).addClass('active').siblings().removeClass('active');
         $('.trait1 .tab_body .item').eq(index).addClass('item_show').siblings().removeClass('item_show');
       });
+
+
+      //发现好物 无缝滚动
+      let finegoods = $('.finegoods');
+      let marList = $('.finegoods .marquee .list');
+      let left = parseInt(marList.css('left'));
+      let scrollBar = $('.finegoods .scroll-bar');
+      let scrollBox = $('.finegoods .scroll-bar span');
+      let scrollBarWidth = scrollBar.width();
+      let scrollBoxWidth = scrollBox.width();
+      let marTimer = setInterval(function() {
+        if(parseInt(marList.css('left')) <= -1980) {
+          left = 0;
+        }
+        marList.css('left', left-- + 'px');
+      },30);
+      finegoods.on('mouseover',function() {
+        clearInterval(marTimer);
+        //计算滚动距离
+        let scrollLeft = (scrollBarWidth -  scrollBoxWidth) / 1980 * (-left);
+        scrollBar.addClass('scroll-bar-show');
+        scrollBox.css('left',scrollLeft + 'px');
+        //滚动条鼠标移动
+        // scrollBox.on('click',function() {
+        //   scrollBox.on('mousemove',function(ev) {
+        //     let mouseX = ev.clientX - (164.6 + 190 + 10 + 15);
+
+        //     console.log(ev.clientX,ev.clientY)
+        //   })
+        // })
+      })
+      console.log(finegoods[0])
+      finegoods.on('mouseout',function() {
+        scrollBar.removeClass('scroll-bar-show');
+        marTimer = setInterval(function() {
+          if(parseInt(marList.css('left')) <= -1980) {
+            left = 0;
+          }
+          marList.css('left',left-- + 'px');
+        },30);
+      })
+
+      //排行榜
+      let traitLbLi = $('.trait .trait3 .leader-boards .title-list li');
+      traitLbLi.on('mouseover',function() {
+        let index = traitLbLi.index(this);
+       $(this).addClass('active').siblings().removeClass('active');
+      $('.trait .trait3 .leader-boards .tabs-msg').eq(index).addClass('tabs-show').siblings().removeClass('tabs-show');
+     }) 
+
+     //为你推荐tabs
+     $('.recommendBox .recommend-tabs li').on('click',function() {
+       $(this).addClass('active').siblings().removeClass('active');
+     })
 
 
       //商品渲染
@@ -116,3 +185,5 @@ var mySwiper = new Swiper ('.banner', {
 
 
   })
+
+  

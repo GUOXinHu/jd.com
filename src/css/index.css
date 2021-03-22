@@ -279,11 +279,11 @@ i {
 .indexBody .widthBox {
   width: 1190px;
   margin: 0 auto;
-  margin-top: 10px;
 }
 .indexBody .bar {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 .indexBody .bar .leftsidebar {
   width: 190px;
@@ -932,8 +932,8 @@ i {
 .indexBody .mainBox .seckillBox {
   display: flex;
   justify-content: space-between;
-  height: 260px;
   text-align: center;
+  height: 260px;
   margin-bottom: 20px;
 }
 .indexBody .mainBox .seckillBox .seckillCountDown {
@@ -1073,6 +1073,10 @@ i {
   height: 100%;
   background-image: linear-gradient(to bottom, #fff, #eee, #eee, #fff);
 }
+.indexBody .mainBox .seckillBox .seckillList .swiper-container .seckillPrev,
+.indexBody .mainBox .seckillBox .seckillList .swiper-container .seckillNext {
+  text-align: left;
+}
 .indexBody .mainBox .seckillBox .seckillBrand {
   position: relative;
   width: 200px;
@@ -1136,6 +1140,9 @@ i {
 }
 .indexBody .mainBox .seckillBox .seckillBrand .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #e1251b;
+}
+.indexBody .mainBox .trait {
+  margin: 20px 0;
 }
 .indexBody .mainBox .trait .trait1 {
   display: flex;
@@ -1451,8 +1458,512 @@ i {
   height: 50px;
   background-image: linear-gradient(to bottom, #fff, #eee, #eee, #fff);
 }
+.indexBody .mainBox .trait .trait2 {
+  margin-top: 20px;
+}
+.indexBody .mainBox .trait .trait2 .finegoods {
+  height: 260px;
+  display: flex;
+  justify-content: space-between;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .nice_goods {
+  display: block;
+  width: 190px;
+  height: 260px;
+  background: url(../img/goodsbg.png) no-repeat;
+  overflow: hidden;
+  cursor: pointer;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .nice_goods .goods_logo {
+  width: 160px;
+  height: 90px;
+  margin: auto;
+  margin-top: 15px;
+  text-align: center;
+  background: url(../img/goodslogo.png) no-repeat;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .nice_goods .goods_logo .text {
+  width: 160px;
+  height: 89px;
+  padding: 55px 0 10px 20px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.indexBody .mainBox .trait .trait2 .finegoods .nice_goods .goods_logo .text span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 14px;
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 50%;
+  padding-left: 2px;
+  margin-left: 6px;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .nice_goods:hover span {
+  background-color: #c81623;
+  border-color: #c81623 !important;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee {
+  display: inline-block;
+  width: 990px;
+  height: 260px;
+  margin-left: 10px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee .list {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee .list li {
+  width: 150px;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 50px;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee .list li img {
+  width: 150px;
+  height: 150px;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee .list li .title {
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee .list li:nth-child(odd) {
+  margin-top: 20px;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee .list li:nth-child(odd) .title {
+  margin-top: 10px;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee .list li:nth-child(even) {
+  margin-top: 50px;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee .list li:nth-child(even) .title {
+  margin-bottom: 10px;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee .list li:hover img {
+  opacity: 0.8;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee .list li:hover .title {
+  color: #e1251b;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee .scroll-bar {
+  display: none;
+  width: 960px;
+  height: 3px;
+  background-color: #f3f3f3;
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  border-radius: 3px;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee .scroll-bar span {
+  position: absolute;
+  left: 0;
+  top: -4px;
+  display: inline-block;
+  width: 99px;
+  height: 9px;
+  background-color: #d8d8d8;
+  border-radius: 4px;
+}
+.indexBody .mainBox .trait .trait2 .finegoods .marquee .scroll-bar-show {
+  display: block;
+}
+.indexBody .mainBox .trait .trait3 {
+  width: 1190px;
+  height: 340px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.indexBody .mainBox .trait .trait3 > div {
+  width: 290px;
+  height: 100%;
+  background-color: #fff;
+}
+.indexBody .mainBox .trait .trait3 > div .box-hd {
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+}
+.indexBody .mainBox .trait .trait3 > div .box-hd h3 {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+}
+.indexBody .mainBox .trait .trait3 > div .box-hd h3 span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 14px;
+  color: #f10215;
+  border: 1px solid #f10215;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: -25px;
+}
+.indexBody .mainBox .trait .trait3 > div .box-hd:hover span {
+  color: #fff;
+  background-color: #f10215;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival {
+  background-image: url(../img/trait3-newbg.png);
+  background-size: contain;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd img {
+  width: 130px;
+  height: 130px;
+  margin: 0 15px;
+  margin-top: 10px;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-container {
+  width: 290px;
+  height: 100%;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-slide {
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  transition: 300ms;
+  transform: scale(0.8);
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-slide .swiper-slide-active .slide-bd {
+  display: block;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-slide-active,
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-slide-duplicate-active {
+  transform: scale(1);
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .slide-item {
+  display: block;
+  width: 260px;
+  height: 250px;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .slide-item .title {
+  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+  line-height: 19px;
+  color: #333;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .slide-item .new {
+  height: 16px;
+  color: #999;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .slide-item .price {
+  margin-top: 20px;
+  color: #e1251b;
+  font-size: 18px;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .slide-item .price i {
+  font-size: 12px;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .slide-item .price span {
+  font-size: 14px;
+}
+.indexBody .mainBox .trait .trait3 .leader-boards {
+  cursor: pointer;
+}
+.indexBody .mainBox .trait .trait3 .leader-boards .title-list {
+  display: flex;
+  justify-content: space-around;
+}
+.indexBody .mainBox .trait .trait3 .leader-boards .title-list li {
+  width: 62px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 12px;
+  color: #999;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+.indexBody .mainBox .trait .trait3 .leader-boards .title-list .active {
+  background-color: #f10215;
+  color: #fff;
+}
+.indexBody .mainBox .trait .trait3 .leader-boards .tabs-msg {
+  display: none;
+  width: 260px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+.indexBody .mainBox .trait .trait3 .leader-boards .tabs-msg .ranking {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  margin-bottom: 10px;
+}
+.indexBody .mainBox .trait .trait3 .leader-boards .tabs-msg .ranking > img {
+  width: 29px;
+  height: 41px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.indexBody .mainBox .trait .trait3 .leader-boards .tabs-msg .ranking .ranking-item {
+  height: 70px;
+  line-height: 70px;
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.indexBody .mainBox .trait .trait3 .leader-boards .tabs-msg .ranking .ranking-item img {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+.indexBody .mainBox .trait .trait3 .leader-boards .tabs-msg .ranking .ranking-item span {
+  width: 140px;
+  max-height: 2.6em;
+  line-height: 1.3em;
+  font-size: 14px;
+  color: #333;
+  overflow: hidden;
+}
+.indexBody .mainBox .trait .trait3 .leader-boards .tabs-msg .ranking:hover span {
+  color: #c81623;
+}
+.indexBody .mainBox .trait .trait3 .leader-boards .tabs-show {
+  display: block;
+}
+.indexBody .mainBox .trait .trait3 .good-shop .shop {
+  width: 260px;
+  height: 128px;
+  margin: 0 15px;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: #fdeefb;
+  cursor: pointer;
+}
+.indexBody .mainBox .trait .trait3 .good-shop .shop .shop-left {
+  width: 120px;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.indexBody .mainBox .trait .trait3 .good-shop .shop .shop-left .shop-title {
+  line-height: 1.3em;
+  color: #333;
+  font-size: 14px;
+}
+.indexBody .mainBox .trait .trait3 .good-shop .shop .shop-left .tag {
+  margin-top: 5px;
+}
+.indexBody .mainBox .trait .trait3 .good-shop .shop .shop-left .tag span {
+  padding: 0 2px;
+  border: 1px solid #e1251b;
+  text-align: center;
+  height: 18px;
+  line-height: 18px;
+  margin-right: 5px;
+  color: #e1251b;
+}
+.indexBody .mainBox .trait .trait3 .good-shop .shop .shop-left .tag span:last-child {
+  color: #596fab;
+  border-color: #596fab;
+}
+.indexBody .mainBox .trait .trait3 .good-shop .shop .shop-left .concern {
+  position: absolute;
+  bottom: 0;
+  color: #999;
+}
+.indexBody .mainBox .trait .trait3 .good-shop .shop .shop-right {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  padding: 5px;
+  float: right;
+}
+.indexBody .mainBox .trait .trait3 .good-shop .shop .shop-right img {
+  width: 90px;
+  height: 90px;
+}
+.indexBody .mainBox .trait .trait3 .good-shop .shop:last-child {
+  background-color: #f3f7db;
+}
+.indexBody .mainBox .trait .trait3 .good-shop .shop:hover .shop-title {
+  color: #c81623;
+}
+.indexBody .mainBox .trait .trait3 .good-shop .shop:hover .shop-right {
+  opacity: 0.8;
+}
+.indexBody .mainBox .trait .trait3 .togoo .togoo-bd {
+  width: 290px;
+  height: 290px;
+  background-color: #c81623;
+  background-image: url(../img/trait3-toggobg.png);
+  cursor: pointer;
+}
+.indexBody .mainBox .trait .trait3 .togoo .togoo-bd .togoo-item {
+  position: relative;
+  width: 260px;
+  height: 82px;
+  padding: 0 15px;
+}
+.indexBody .mainBox .trait .trait3 .togoo .togoo-bd .togoo-item .item-wrap {
+  height: 82px;
+  overflow: hidden;
+}
+.indexBody .mainBox .trait .trait3 .togoo .togoo-bd .togoo-item .item-wrap .wrapimg {
+  width: 58px;
+  height: 58px;
+  padding: 8px;
+  margin-left: 7px;
+  margin-top: 8px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+  float: left;
+}
+.indexBody .mainBox .trait .trait3 .togoo .togoo-bd .togoo-item .item-wrap .wrapimg img {
+  width: 50px;
+  height: 50px;
+}
+.indexBody .mainBox .trait .trait3 .togoo .togoo-bd .togoo-item .item-wrap .wrap-info {
+  padding-top: 5px;
+  width: 140px;
+  height: 70px;
+  margin-left: 80px;
+}
+.indexBody .mainBox .trait .trait3 .togoo .togoo-bd .togoo-item .item-wrap .wrap-info .price {
+  height: 34px;
+  line-height: 34px;
+  font-size: 28px;
+  color: #e33333;
+  font-weight: 500;
+  font-family: impact, sans-serif;
+}
+.indexBody .mainBox .trait .trait3 .togoo .togoo-bd .togoo-item .item-wrap .wrap-info .price i {
+  font-size: 14px;
+}
+.indexBody .mainBox .trait .trait3 .togoo .togoo-bd .togoo-item .item-wrap .wrap-info .limit {
+  height: 18px;
+  line-height: 18px;
+  color: #999;
+}
+.indexBody .mainBox .trait .trait3 .togoo .togoo-bd .togoo-item .item-wrap .wrap-info .desc {
+  height: 18px;
+  line-height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333;
+}
+.indexBody .mainBox .trait .trait3 .togoo .togoo-bd .togoo-item .item-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 82px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+.indexBody .mainBox .trait .trait3 .togoo .togoo-bd .togoo-item .item-more i {
+  position: absolute;
+  top: 31px;
+  left: 18px;
+}
+.indexBody .mainBox .trait .trait3 .togoo .togoo-bd .togoo-item:hover .item-more {
+  color: #c81623;
+}
 .indexBody .mainBox .recommendBox {
   text-align: center;
+}
+.indexBody .mainBox .recommendBox .recommend-tabs {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.indexBody .mainBox .recommendBox .recommend-tabs ul {
+  margin: 0 55px;
+}
+.indexBody .mainBox .recommendBox .recommend-tabs ul li {
+  position: relative;
+  float: left;
+  width: 180px;
+  height: 60px;
+  text-align: center;
+  padding-top: 6px;
+}
+.indexBody .mainBox .recommendBox .recommend-tabs ul li .title {
+  width: 80px;
+  height: 27px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 27px;
+  color: #333;
+  border-radius: 50px;
+  margin: 0 auto;
+}
+.indexBody .mainBox .recommendBox .recommend-tabs ul li .desc {
+  width: 180px;
+  height: 28px;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+.indexBody .mainBox .recommendBox .recommend-tabs ul li::after {
+  content: "";
+  width: 1px;
+  height: 30px;
+  background-image: linear-gradient(to bottom, #fff 0, #dfdfdf 5px, #dfdfdf 25px, #fff);
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+.indexBody .mainBox .recommendBox .recommend-tabs ul li:last-child::after {
+  content: "";
+  width: 0;
+  height: 0;
+}
+.indexBody .mainBox .recommendBox .recommend-tabs ul li:hover .title {
+  color: #b6101b;
+}
+.indexBody .mainBox .recommendBox .recommend-tabs ul li:hover .desc {
+  color: #b6101b;
+}
+.indexBody .mainBox .recommendBox .recommend-tabs ul .active .title {
+  color: #fff !important;
+  background-color: #e1251b;
+}
+.indexBody .mainBox .recommendBox .recommend-tabs ul .active .desc {
+  color: #c81623;
 }
 .indexBody .mainBox .recommendBox .titleBox h3 {
   width: 150px;
@@ -1461,6 +1972,29 @@ i {
   margin: 0 auto;
   font-size: 28px;
   color: #333;
+  position: relative;
+  margin-bottom: 20px;
+}
+.indexBody .mainBox .recommendBox .titleBox h3::before {
+  content: "";
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  margin-top: -10px;
+  background-image: url(../img/trait-sprite.png);
+}
+.indexBody .mainBox .recommendBox .titleBox h3::after {
+  content: "";
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  margin-top: -10px;
+  background-image: url(../img/trait-sprite.png);
+  transform: rotate(180deg);
 }
 .indexBody .mainBox .recommendBox .product .list {
   width: 1190px;
@@ -1530,8 +2064,8 @@ i {
 .indexBody .mainBox .recommendBox .product .list .item .price .plus .plus_name {
   display: inline-block;
   width: 39px;
-  height: 12px;
-  line-height: 15px;
+  height: 15px;
+  line-height: 16px;
   text-align: center;
   background-color: #363634;
   color: #e5d790;
@@ -1607,4 +2141,164 @@ i {
 .indexBody .swiper-button-prev:hover,
 .indexBody .swiper-button-next:hover {
   background-color: rgba(0, 0, 0, 0.4);
+}
+.indexBody .mart10 {
+  margin-top: 10px;
+}
+.indexBody .jd-footer .mod-service-box {
+  border-bottom: 1px solid #dedede;
+}
+.indexBody .jd-footer .mod-service-box .mod-service {
+  width: 1190px;
+  height: 102px;
+  padding: 30px 0;
+  margin: 0 auto;
+}
+.indexBody .jd-footer .mod-service-box .mod-service .mod-list .mod-item {
+  width: 297px;
+  height: 42px;
+  float: left;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 60px;
+  padding-left: 20px;
+}
+.indexBody .jd-footer .mod-service-box .mod-service .mod-list .mod-item h5 {
+  display: inline-block;
+  width: 36px;
+  height: 42px;
+  background: url(../img/footer01.png) no-repeat 0px -192px;
+}
+.indexBody .jd-footer .mod-service-box .mod-service .mod-list .mod-item span {
+  display: inline-block;
+  line-height: 42px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+}
+.indexBody .jd-footer .mod-service-box .mod-service .mod-list .mod-item:nth-child(2) h5 {
+  background-position: -41px -192px;
+}
+.indexBody .jd-footer .mod-service-box .mod-service .mod-list .mod-item:nth-child(3) h5 {
+  background-position: -82px -192px;
+}
+.indexBody .jd-footer .mod-service-box .mod-service .mod-list .mod-item:nth-child(4) h5 {
+  background-position: -123px -192px;
+}
+.indexBody .jd-footer .mod-help {
+  height: 200px;
+  padding: 20px 0;
+  border-bottom: 1px solid #dedede;
+}
+.indexBody .jd-footer .mod-help .help-list .help-item {
+  float: left;
+  width: 198px;
+  text-align: left;
+  user-select: none;
+  cursor: pointer;
+}
+.indexBody .jd-footer .mod-help .help-list .help-item h5 {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  line-height: 22px;
+  cursor: text;
+}
+.indexBody .jd-footer .mod-help .help-list .help-item p {
+  color: #666;
+  line-height: 22px;
+}
+.indexBody .jd-footer .mod-help .help-list .help-item p:hover {
+  color: #e1251b;
+}
+.indexBody .jd-footer .mod-help .help-list .help-item:last-child p:first-of-type {
+  cursor: text;
+  color: #666;
+}
+.indexBody .jd-footer .mod-help .help-list .help-item:last-child p:last-child {
+  text-align: right;
+}
+.indexBody .jd-footer .mod-copyright {
+  padding: 15px 0;
+}
+.indexBody .jd-footer .mod-copyright .mod-copyright-link {
+  text-align: center;
+}
+.indexBody .jd-footer .mod-copyright .mod-copyright-link a {
+  color: #666;
+}
+.indexBody .jd-footer .mod-copyright .mod-copyright-link a:hover {
+  color: #e1251b;
+}
+.indexBody .jd-footer .mod-copyright .mod-copyright-link span {
+  color: #666;
+  margin: 0 5px;
+}
+.indexBody .jd-footer .mod-info {
+  padding: 10px 0;
+}
+.indexBody .jd-footer .mod-info p {
+  text-align: center;
+  line-height: 22px;
+}
+.indexBody .jd-footer .mod-info p a {
+  color: #666;
+}
+.indexBody .jd-footer .mod-info p a:hover {
+  color: #e1251b;
+}
+.indexBody .jd-footer .mod-info p span {
+  color: #666;
+  margin: 0 5px;
+}
+.indexBody .jd-footer .mod-info p i {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  margin-top: -1px;
+}
+.indexBody .jd-footer .mod-info p i:nth-of-type(1) {
+  background: url(../img/footer01.png) no-repeat -109px -155px;
+}
+.indexBody .jd-footer .mod-info p i:nth-of-type(2) {
+  background: url(../img/footer01.png) no-repeat -128px -155px;
+}
+.indexBody .jd-footer .mod-info p i:nth-of-type(3) {
+  background: url(../img/footer01.png) no-repeat -148px -155px;
+}
+.indexBody .jd-footer .mod-info p i:nth-of-type(4) {
+  background: url(../img/footer01.png) no-repeat -169px -155px;
+}
+.indexBody .jd-footer .mod-info p i:nth-of-type(5) {
+  background: url(../img/footer01.png) no-repeat -109px -170px;
+}
+.indexBody .jd-footer .mod-info p:last-child {
+  text-align: center;
+  margin: 25px 0;
+}
+.indexBody .jd-footer .mod-info p:last-child a {
+  display: inline-block;
+  width: 103px;
+  height: 32px;
+  line-height: 32px;
+  margin: 0 3px;
+}
+.indexBody .jd-footer .mod-info p:last-child a:nth-child(1) {
+  background: url(../img/footer01.png) no-repeat -207px 0px;
+}
+.indexBody .jd-footer .mod-info p:last-child a:nth-child(2) {
+  background: url(../img/footer01.png) no-repeat -207px -35px;
+}
+.indexBody .jd-footer .mod-info p:last-child a:nth-child(3) {
+  background: url(../img/footer01.png) no-repeat -207px -72px;
+}
+.indexBody .jd-footer .mod-info p:last-child a:nth-child(4) {
+  background: url(../img/footer01.png) no-repeat -207px -110px;
+}
+.indexBody .jd-footer .mod-info p:last-child a:nth-child(5) {
+  background: url(../img/footer01.png) no-repeat -207px -148px;
+}
+.indexBody .jd-footer .mod-info p:last-child a:nth-child(6) {
+  background: url(../img/footer01.png) no-repeat -3px -158px;
 }
