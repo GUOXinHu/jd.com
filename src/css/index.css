@@ -10,7 +10,7 @@ a {
 li {
   list-style: none;
 }
-i {
+ul {
   font-style: normal;
 }
 .indexBody {
@@ -1628,6 +1628,10 @@ i {
 .indexBody .mainBox .trait .trait3 .new-arrival {
   background-image: url(../img/trait3-newbg.png);
   background-size: contain;
+  overflow: hidden;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd {
+  position: relative;
 }
 .indexBody .mainBox .trait .trait3 .new-arrival .box-bd img {
   width: 130px;
@@ -1635,9 +1639,20 @@ i {
   margin: 0 15px;
   margin-top: 10px;
 }
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .slide-bd {
+  position: absolute;
+  left: -20px;
+  top: 145px;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .slide-bd p {
+  text-align: center;
+}
 .indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-container {
-  width: 290px;
-  height: 100%;
+  position: absolute;
+  left: -45px;
+  top: 0;
+  width: 380px;
+  height: 250px;
 }
 .indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-slide {
   /* Center slide text vertically */
@@ -1656,14 +1671,28 @@ i {
   transition: 300ms;
   transform: scale(0.8);
 }
-.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-slide .swiper-slide-active .slide-bd {
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-slide .slide-bd {
+  display: none;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-slide-active .slide-bd {
   display: block;
 }
 .indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-slide-active,
 .indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-slide-duplicate-active {
   transform: scale(1);
 }
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-button-prev {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+}
+.indexBody .mainBox .trait .trait3 .new-arrival .box-bd .swiper-button-next {
+  position: absolute;
+  top: 100px;
+  right: 45px;
+}
 .indexBody .mainBox .trait .trait3 .new-arrival .box-bd .slide-item {
+  position: relative;
   display: block;
   width: 260px;
   height: 250px;
@@ -1823,7 +1852,7 @@ i {
 }
 .indexBody .mainBox .trait .trait3 .togoo .togoo-bd {
   width: 290px;
-  height: 290px;
+  height: 280px;
   background-color: #c81623;
   background-image: url(../img/trait3-toggobg.png);
   cursor: pointer;
@@ -2301,4 +2330,23 @@ i {
 }
 .indexBody .jd-footer .mod-info p:last-child a:nth-child(6) {
   background: url(../img/footer01.png) no-repeat -3px -158px;
+}
+.indexBody .elevator {
+  float: right;
+  position: sticky;
+  top: 75px;
+  width: 58px;
+  background-color: #fff;
+  margin-right: 85px;
+}
+.indexBody .elevator .elevator-list {
+  width: 100%;
+}
+.indexBody .elevator .elevator-list li {
+  width: 58px;
+  height: 58px;
+  line-height: 19px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
 }

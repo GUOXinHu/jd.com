@@ -153,7 +153,7 @@ var mySwiper = new Swiper ('.banner', {
             temp += `
               <li class="item">
                 <a href="">
-                    <img src="./img/${pricture.pro}" alt="">
+                    <img class="lazy" data-original="./img/${pricture.pro}" alt="">
                     <div class="title">
                         <span class="self-run">${selfRun}</span>
                         ${el.title}
@@ -180,6 +180,7 @@ var mySwiper = new Swiper ('.banner', {
           //将数据写到页面
           list.html(temp);
           
+          $("img.lazy").lazyload({effect: "fadeIn"});
         }
       });
 

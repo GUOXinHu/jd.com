@@ -13,7 +13,7 @@ li {
     list-style: none;
 }
 
-i {
+ul {
     font-style: normal;
 }
 
@@ -1996,8 +1996,11 @@ i {
                 .new-arrival {
                     background-image: url(../img/trait3-newbg.png);
                     background-size: contain;
+                    overflow: hidden;
 
                     .box-bd {
+                        position: relative;
+
                         img {
                             width: 130px;
                             height: 130px;
@@ -2005,9 +2008,22 @@ i {
                             margin-top: 10px;
                         }
 
+                        .slide-bd {
+                            position: absolute;
+                            left: -20px;
+                            top: 145px;
+
+                            p {
+                                text-align: center;
+                            }
+                        }
+
                         .swiper-container {
-                            width: 290px;
-                            height: 100%;
+                            position: absolute;
+                            left: -45px;
+                            top: 0;
+                            width: 380px;
+                            height: 250px;
                         }
 
                         .swiper-slide {
@@ -2027,14 +2043,15 @@ i {
                             transition: 300ms;
                             transform: scale(0.8);
 
-                            // .slide-bd {
-                            //     display: none;
-                            // }
+                            .slide-bd {
+                                display: none;
+                            }
 
-                            .swiper-slide-active {
-                                .slide-bd {
-                                    display: block;
-                                }
+                        }
+
+                        .swiper-slide-active {
+                            .slide-bd {
+                                display: block;
                             }
                         }
 
@@ -2043,7 +2060,20 @@ i {
                             transform: scale(1);
                         }
 
+                        .swiper-button-prev {
+                            position: absolute;
+                            top: 100px;
+                            left: 40px;
+                        }
+
+                        .swiper-button-next {
+                            position: absolute;
+                            top: 100px;
+                            right: 45px;
+                        }
+
                         .slide-item {
+                            position: relative;
                             display: block;
                             width: 260px;
                             height: 250px;
@@ -2246,7 +2276,7 @@ i {
 
                     .togoo-bd {
                         width: 290px;
-                        height: 290px;
+                        height: 280px;
                         background-color: #c81623;
                         background-image: url(../img/trait3-toggobg.png);
                         cursor: pointer;
@@ -2857,6 +2887,28 @@ i {
                 a:nth-child(6) {
                     background: url(../img/footer01.png) no-repeat -3px -158px;
                 }
+            }
+        }
+    }
+
+    .elevator {
+        float: right;
+        position: sticky;
+        top: 75px;
+        width: 58px;
+        background-color: #fff;
+        margin-right: 85px;
+
+        .elevator-list {
+            width: 100%;
+
+            li {
+                width: 58px;
+                height: 58px;
+                line-height: 19px;
+                padding: 10px;
+                text-align: center;
+                font-size: 14px;
             }
         }
     }
