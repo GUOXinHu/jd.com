@@ -23,8 +23,8 @@ window.onload=function () {
         smallbox.onmousemove = function (event) {
             var event = event || window.event;
 
-            var pinX = event.clientX - smallbox.offsetParent.offsetLeft - i_box.offsetWidth / 2;
-            var pinY = event.clientY - smallbox.offsetParent.offsetTop - i_box.offsetHeight / 2;
+             var pinX = event.clientX - smallbox.getBoundingClientRect().left - i_box.offsetWidth / 2;
+             var pinY = event.clientY - smallbox.getBoundingClientRect().top - i_box.offsetHeight / 2;
 
             if (pinX < 0) {
                 pinX = 0;
@@ -47,8 +47,8 @@ window.onload=function () {
             i_box.style.top = pinY + "px";
 
 
-            bigimg.style.left = -pinX / (smallbox.offsetWidth / bigbox.offsetWidth) + 100 + "px";
-            bigimg.style.top = -pinY / (smallbox.offsetHeight / bigbox.offsetHeight) + 50+ "px";
+            bigimg.style.left = -pinX / (smallbox.offsetWidth / bigbox.offsetWidth) + 150 + "px";
+            bigimg.style.top = -pinY / (smallbox.offsetHeight / bigbox.offsetHeight) + 120 +"px";
 
 
 
@@ -73,8 +73,8 @@ window.onload=function () {
                 var img= list_li[i];
                 img.onmouseover=function()
                 {
-                    smallpic.src="img/pro09-viewbig0"+(i+1)+".jpg";
-                    bigimg.src="img/pro09-viewbig0"+(i+1)+".jpg";
+                    smallpic.src="./img/pro09-viewbig0"+(i+1)+".jpg";
+                    bigimg.src="./img/pro09-viewbig0"+(i+1)+".jpg";
 
                 }
 
@@ -86,33 +86,31 @@ window.onload=function () {
 
 
     }
-    list_ul.style.width=58*list_li.length+"px";
+    list_ul.style.width=76*list_li.length+"px";
     var i=list_li.length-5;
     var index=0;
-    var indexon=-58;
+    var indexon=-76;
     var leftindex=parseInt(list_ul.style.left);
 
-   leftpre.onclick=function () {
+   rightpre.onclick=function () {
     var leftindex=parseInt(list_ul.style.left);
-       console.log(i*index);
-       console.log(leftindex);
+    //    console.log(i*index);
+    //    console.log(leftindex);
         if(leftindex>i*indexon)
         {
-            index=index+(-58);
+            index=index+(-76);
             list_ul.style.left=index+"px";
-
-
         }
 
 
     }
 
-    rightpre.onclick=function () {
+    leftpre.onclick=function () {
         var leftindex=parseInt(list_ul.style.left);
 
         if(leftindex<0)
         {
-            index=index-(-58);
+            index=index-(-76);
             list_ul.style.left=index+"px";
 
         }

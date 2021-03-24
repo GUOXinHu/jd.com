@@ -1,4 +1,6 @@
 import {$} from './library/jquery-module.js';
+import './library/jquery.lazyload.js';
+
 //顶部中心轮播图
 var mySwiper = new Swiper ('.banner', {
     direction: 'horizontal',
@@ -111,7 +113,6 @@ var mySwiper = new Swiper ('.banner', {
         //   })
         // })
       })
-      console.log(finegoods[0])
       finegoods.on('mouseout',function() {
         scrollBar.removeClass('scroll-bar-show');
         marTimer = setInterval(function() {
@@ -134,7 +135,6 @@ var mySwiper = new Swiper ('.banner', {
      $('.recommendBox .recommend-tabs li').on('click',function() {
        $(this).addClass('active').siblings().removeClass('active');
      })
-
 
       //商品渲染
       //通过Ajax请求商品图片 标题 价格
@@ -179,7 +179,6 @@ var mySwiper = new Swiper ('.banner', {
           });
           //将数据写到页面
           list.html(temp);
-          
           $("img.lazy").lazyload({effect: "fadeIn"});
         }
       });

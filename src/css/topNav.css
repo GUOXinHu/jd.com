@@ -1,0 +1,362 @@
+.topNav {
+  width: 100%;
+  height: 31px;
+  background-color: #e3e4e5;
+  border-bottom: 1px solid #ddd;
+}
+.topNav .navflex {
+  height: 30px;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topNav .navflex .addressBox {
+  width: 58px;
+  height: 100%;
+  line-height: 30px;
+  border: 1px solid #e3e4e5;
+  z-index: 10;
+}
+.topNav .navflex .addressBox .iconfont {
+  color: red;
+}
+.topNav .navflex .addressBox .address {
+  display: inline-block;
+}
+.topNav .navflex .addressBox .addressUl {
+  display: none;
+}
+.topNav .navflex .addressBox:hover {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.topNav .navflex .addressBox:hover .addressUl {
+  width: 300px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  position: absolute;
+  top: 28px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.topNav .navflex .addressBox:hover .addressUl .active {
+  background-color: #f10215;
+}
+.topNav .navflex .addressBox:hover .addressUl .active a {
+  color: #fff;
+}
+.topNav .navflex .addressBox:hover .addressUl .active a:hover {
+  background-color: #f10215;
+  color: #fff;
+}
+.topNav .navflex .addressBox:hover .addressUl li {
+  width: 50px;
+  height: 25px;
+  line-height: 25px;
+  margin: 10px 5px 0;
+  list-style: none;
+  text-align: center;
+}
+.topNav .navflex .addressBox:hover .addressUl li a {
+  color: #999;
+  text-decoration: none;
+}
+.topNav .navflex .addressBox:hover .addressUl li a:hover {
+  padding: 2px 5px;
+  background-color: #f4f4f4;
+  color: #e33333;
+}
+.topNav .navflex .navUl {
+  width: 720px;
+  height: 100%;
+}
+.topNav .navflex .navUl .navList {
+  display: flex;
+  justify-content: space-between;
+}
+.topNav .navflex .navUl .navList .navLi {
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+  padding: 0 5px;
+  margin: 0 5px;
+  word-break: keep-all;
+}
+.topNav .navflex .navUl .navList .navLi > a {
+  line-height: 30px;
+  color: #999;
+  text-decoration: none;
+}
+.topNav .navflex .navUl .navList .navLi:nth-of-type(2) a,
+.topNav .navflex .navUl .navList .navLi:nth-of-type(6) a {
+  color: #f10215;
+}
+.topNav .navflex .navUl .navList .navLi:first-child {
+  position: relative;
+  left: 15px;
+}
+.topNav .navflex .navUl .navList .navLi:last-child {
+  margin-right: 10px;
+}
+.topNav .navflex .navUl .navList .navLi::after {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 10px;
+  background: #ccc;
+  position: absolute;
+  top: 10px;
+  right: -5px;
+}
+.topNav .navflex .navUl .navList .navLiNo::after {
+  width: 0;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(4),
+.topNav .navflex .navUl .navList .navLi:nth-child(6),
+.topNav .navflex .navUl .navList .navLi:nth-child(7) {
+  position: relative;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(4) .list,
+.topNav .navflex .navUl .navList .navLi:nth-child(6) .list,
+.topNav .navflex .navUl .navList .navLi:nth-child(7) .list {
+  display: none;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(4):hover,
+.topNav .navflex .navUl .navList .navLi:nth-child(6):hover,
+.topNav .navflex .navUl .navList .navLi:nth-child(7):hover {
+  background-color: #fff;
+  position: relative;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  height: 31px;
+  z-index: 10;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list,
+.topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list,
+.topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list {
+  display: block;
+  width: 300px;
+  padding-top: 5px;
+  background-color: #fff;
+  position: absolute;
+  top: 30px;
+  left: -1px;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list li,
+.topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list li,
+.topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list li {
+  width: 40%;
+  list-style: none;
+  margin: 5px auto;
+  text-align: left;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list li a,
+.topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list li a,
+.topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list li a {
+  color: #999;
+  text-decoration: none;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list li a:hover,
+.topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list li a:hover,
+.topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list li a:hover {
+  color: #f10215;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list .listUp,
+.topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listUp,
+.topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list .listUp,
+.topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list .listDown,
+.topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listDown,
+.topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list .listDown {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list .listUp,
+.topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listUp,
+.topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list .listUp {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list .listDown,
+.topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listDown,
+.topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list .listDown {
+  margin-bottom: 15px;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list {
+  width: 200px;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listUp {
+  border: 0;
+  margin-bottom: 0;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listUp li:nth-last-child(2) {
+  width: 50%;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listUp li:nth-last-child(1) {
+  width: 30%;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list {
+  width: 150px;
+  left: -75px;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list h3 {
+  color: #666;
+  user-select: none;
+  cursor: default;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list .listUp {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(8) {
+  position: relative;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list {
+  display: none;
+  width: 1190px;
+  background-color: #fff;
+  justify-content: space-between;
+  position: absolute;
+  top: 30px;
+  left: -1036px;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul2,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul3,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul4 {
+  position: relative;
+  width: 22%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1 li,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul2 li,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul3 li,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul4 li {
+  width: 30%;
+  height: 25px;
+  list-style: none;
+  padding: 5px;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1 li h3,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul2 li h3,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul3 li h3,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul4 li h3 {
+  color: #666;
+  cursor: default;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1 li a,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul2 li a,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul3 li a,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul4 li a {
+  color: #999;
+  text-decoration: none;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1 li a:hover,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul2 li a:hover,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul3 li a:hover,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul4 li a:hover {
+  color: #f10215;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1 {
+  width: 30%;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1 li {
+  width: 25%;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1::after,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul2::after,
+.topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul3::after {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 80%;
+  background: #D6D6D6;
+  position: absolute;
+  top: 15px;
+  right: 0px;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(8):hover {
+  background-color: #fff;
+  position: relative;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  height: 31px;
+  z-index: 10;
+}
+.topNav .navflex .navUl .navList .navLi:nth-child(8):hover .list {
+  display: flex;
+}
+.topNav .navflex .navUl .navList .navLi:last-child .phoneUl {
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  width: 200px;
+  position: absolute;
+  top: 30px;
+  right: -10px;
+  border: 1px solid #ccc;
+  cursor: default;
+}
+.topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi img {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #ccc;
+}
+.topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight {
+  margin-left: 5px;
+}
+.topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight > p {
+  color: #f10215;
+}
+.topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os {
+  display: flex;
+  justify-content: flex-start;
+}
+.topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os div {
+  width: 20%;
+  text-align: center;
+}
+.topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os a {
+  text-decoration: none;
+  color: black;
+}
+.topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os div:nth-of-type(2) a {
+  color: chartreuse;
+}
+.topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os p {
+  text-align: center;
+  padding-right: 10px;
+  transform: scale(0.6);
+}
+.topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os div:nth-child(1) p,
+.topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os div:nth-child(2) p {
+  position: relative;
+  left: -5px;
+}
+.topNav .navflex .navUl .navList .navLi:last-child:hover {
+  z-index: 10;
+}
+.topNav .navflex .navUl .navList .navLi:last-child:hover .phoneUl {
+  display: flex;
+}
