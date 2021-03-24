@@ -1,0 +1,157 @@
+.jd-footer .mod-service-box {
+  border-bottom: 1px solid #dedede;
+}
+.jd-footer .mod-service-box .mod-service {
+  width: 1190px;
+  height: 102px;
+  padding: 30px 0;
+  margin: 0 auto;
+}
+.jd-footer .mod-service-box .mod-service .mod-list .mod-item {
+  width: 297px;
+  height: 42px;
+  float: left;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 60px;
+  padding-left: 20px;
+}
+.jd-footer .mod-service-box .mod-service .mod-list .mod-item h5 {
+  display: inline-block;
+  width: 36px;
+  height: 42px;
+  background: url(../img/footer01.png) no-repeat 0px -192px;
+}
+.jd-footer .mod-service-box .mod-service .mod-list .mod-item span {
+  display: inline-block;
+  line-height: 42px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+}
+.jd-footer .mod-service-box .mod-service .mod-list .mod-item:nth-child(2) h5 {
+  background-position: -41px -192px;
+}
+.jd-footer .mod-service-box .mod-service .mod-list .mod-item:nth-child(3) h5 {
+  background-position: -82px -192px;
+}
+.jd-footer .mod-service-box .mod-service .mod-list .mod-item:nth-child(4) h5 {
+  background-position: -123px -192px;
+}
+.jd-footer .mod-help {
+  height: 200px;
+  padding: 20px 0;
+  border-bottom: 1px solid #dedede;
+}
+.jd-footer .mod-help .help-list .help-item {
+  float: left;
+  width: 198px;
+  text-align: left;
+  user-select: none;
+  cursor: pointer;
+}
+.jd-footer .mod-help .help-list .help-item h5 {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  line-height: 22px;
+  cursor: text;
+}
+.jd-footer .mod-help .help-list .help-item p {
+  color: #666;
+  line-height: 22px;
+}
+.jd-footer .mod-help .help-list .help-item p:hover {
+  color: #e1251b;
+}
+.jd-footer .mod-help .help-list .help-item:last-child p:first-of-type {
+  cursor: text;
+  color: #666;
+}
+.jd-footer .mod-help .help-list .help-item:last-child p:last-child {
+  text-align: right;
+}
+.jd-footer .mod-copyright {
+  padding: 15px 0;
+}
+.jd-footer .mod-copyright .mod-copyright-link {
+  text-align: center;
+}
+.jd-footer .mod-copyright .mod-copyright-link a {
+  color: #666;
+}
+.jd-footer .mod-copyright .mod-copyright-link a:hover {
+  color: #e1251b;
+}
+.jd-footer .mod-copyright .mod-copyright-link span {
+  color: #666;
+  margin: 0 5px;
+}
+.jd-footer .mod-info {
+  padding: 10px 0;
+}
+.jd-footer .mod-info p {
+  text-align: center;
+  line-height: 22px;
+}
+.jd-footer .mod-info p a {
+  color: #666;
+}
+.jd-footer .mod-info p a:hover {
+  color: #e1251b;
+}
+.jd-footer .mod-info p span {
+  color: #666;
+  margin: 0 5px;
+}
+.jd-footer .mod-info p i {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  margin-top: -1px;
+}
+.jd-footer .mod-info p i:nth-of-type(1) {
+  background: url(../img/footer01.png) no-repeat -109px -155px;
+}
+.jd-footer .mod-info p i:nth-of-type(2) {
+  background: url(../img/footer01.png) no-repeat -128px -155px;
+}
+.jd-footer .mod-info p i:nth-of-type(3) {
+  background: url(../img/footer01.png) no-repeat -148px -155px;
+}
+.jd-footer .mod-info p i:nth-of-type(4) {
+  background: url(../img/footer01.png) no-repeat -169px -155px;
+}
+.jd-footer .mod-info p i:nth-of-type(5) {
+  background: url(../img/footer01.png) no-repeat -109px -170px;
+}
+.jd-footer .mod-info p:last-child {
+  text-align: center;
+  margin: 25px 0;
+}
+.jd-footer .mod-info p:last-child a {
+  display: inline-block;
+  width: 103px;
+  height: 32px;
+  line-height: 32px;
+  margin: 0 3px;
+}
+.jd-footer .mod-info p:last-child a:nth-child(1) {
+  background: url(../img/footer01.png) no-repeat -207px 0px;
+}
+.jd-footer .mod-info p:last-child a:nth-child(2) {
+  background: url(../img/footer01.png) no-repeat -207px -35px;
+}
+.jd-footer .mod-info p:last-child a:nth-child(3) {
+  background: url(../img/footer01.png) no-repeat -207px -72px;
+}
+.jd-footer .mod-info p:last-child a:nth-child(4) {
+  background: url(../img/footer01.png) no-repeat -207px -110px;
+}
+.jd-footer .mod-info p:last-child a:nth-child(5) {
+  background: url(../img/footer01.png) no-repeat -207px -148px;
+}
+.jd-footer .mod-info p:last-child a:nth-child(6) {
+  background: url(../img/footer01.png) no-repeat -3px -158px;
+}

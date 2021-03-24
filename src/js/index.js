@@ -152,7 +152,7 @@ var mySwiper = new Swiper ('.banner', {
             let plusShow = plusPrice ? ' plus_show' : '';
             temp += `
               <li class="item">
-                <a href="">
+                <a href="./details.html?id=${el.id}">
                     <img class="lazy" data-original="./img/${pricture.pro}" alt="">
                     <div class="title">
                         <span class="self-run">${selfRun}</span>

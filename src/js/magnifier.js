@@ -116,8 +116,5 @@ window.onload=function () {
         }
 
     }
-
-
-
 }
 
