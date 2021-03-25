@@ -1147,24 +1147,33 @@ ul {
   outline: none;
   border: 0;
 }
-.product-intro .item-intro .choose .choose-btns .choose-amount a {
+.product-intro .item-intro .choose .choose-btns .choose-amount span {
+  display: inline-block;
   width: 17px;
   height: 24px;
   line-height: 22px;
   text-align: center;
   background-color: #f1f1f1;
   border: 1px solid #ccc;
+  cursor: pointer;
+  user-select: none;
 }
-.product-intro .item-intro .choose .choose-btns .choose-amount a:first-of-type {
+.product-intro .item-intro .choose .choose-btns .choose-amount span:first-of-type {
   position: absolute;
   right: -17px;
   top: -1px;
   border-bottom: 1px solid #ccc;
 }
-.product-intro .item-intro .choose .choose-btns .choose-amount a:last-of-type {
+.product-intro .item-intro .choose .choose-btns .choose-amount span:last-of-type {
   position: absolute;
   right: -17px;
   bottom: -1px;
+}
+.product-intro .item-intro .choose .choose-btns .choose-amount input::-webkit-outer-spin-button,
+.product-intro .item-intro .choose .choose-btns .choose-amount input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 .product-intro .item-intro .choose .choose-btns .btn {
   float: left;
@@ -1180,6 +1189,16 @@ ul {
   border: 0;
   margin-left: 20px;
   cursor: pointer;
+  outline: none;
+}
+.product-intro .item-intro .choose .choose-btns .store {
+  display: inline-block;
+  height: 46px;
+  line-height: 70px;
+  color: #999;
+  vertical-align: bottom;
+  user-select: none;
+  cursor: default;
 }
 .product-intro .item-intro .choose .hint {
   float: left;
@@ -1303,18 +1322,21 @@ ul {
 }
 .w .fittings .product-item .suits .fit-product li .title {
   width: 134px;
-  height: 36px;
-  overflow: hidden;
+  margin-bottom: 5px;
   color: #666;
   text-align: left;
   cursor: pointer;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .w .fittings .product-item .suits .fit-product li .title:hover {
   color: #f10215;
 }
 .w .fittings .product-item .suits .fit-product li .price {
   text-align: left;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 .w .fittings .product-item .suits .fit-product li .price strong {
   margin-left: 5px;
@@ -1528,12 +1550,12 @@ ul {
   color: #666;
   cursor: pointer;
 }
-.w .details .detail-main .tab-nav .list .active {
-  background-color: #f10215;
-  color: #fff;
-}
 .w .details .detail-main .tab-nav .list li:hover {
   color: #f10215;
+}
+.w .details .detail-main .tab-nav .list li.active {
+  background-color: #f10215;
+  color: #fff;
 }
 .w .details .detail-main .tab-nav .list .join-cart {
   width: 94px;
@@ -1572,6 +1594,9 @@ ul {
   margin-bottom: 5px;
   float: left;
   padding-left: 42px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .w .details .detail-main .tab-con .nav-item .more {
   overflow: hidden;
@@ -1586,9 +1611,6 @@ ul {
 .w .details .detail-main .tab-con .center {
   width: 990px;
   text-align: center;
-}
-.w .details .detail-main .tab-con .center img {
-  display: block;
 }
 .jd-footer .mod-service-box {
   border-bottom: 1px solid #dedede;

@@ -227,6 +227,7 @@ ul {
     background: url('../img/pro09Logo.jpg') no-repeat;
     background-size: contain;
     cursor: pointer;
+
 }
 
 .shop-nav {
@@ -958,27 +959,36 @@ ul {
                         border: 0;
                     }
 
-                    a {
+                    span {
+                        display: inline-block;
                         width: 17px;
                         height: 24px;
                         line-height: 22px;
                         text-align: center;
                         background-color: #f1f1f1;
                         border: 1px solid #ccc;
-
+                        cursor: pointer;
+                        user-select: none;
                     }
 
-                    a:first-of-type {
+                    span:first-of-type {
                         position: absolute;
                         right: -17px;
                         top: -1px;
                         border-bottom: 1px solid #ccc;
                     }
 
-                    a:last-of-type {
+                    span:last-of-type {
                         position: absolute;
                         right: -17px;
                         bottom: -1px;
+                    }
+
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        margin: 0;
                     }
                 }
 
@@ -996,6 +1006,17 @@ ul {
                     border: 0;
                     margin-left: 20px;
                     cursor: pointer;
+                    outline: none;
+                }
+
+                .store {
+                    display: inline-block;
+                    height: 46px;
+                    line-height: 70px;
+                    color: #999;
+                    vertical-align: bottom;
+                    user-select: none;
+                    cursor: default;
                 }
 
             }
@@ -1158,11 +1179,14 @@ ul {
 
                         .title {
                             width: 134px;
-                            height: 36px;
-                            overflow: hidden;
+                            margin-bottom: 5px;
                             color: #666;
                             text-align: left;
                             cursor: pointer;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
                         }
 
                         .title:hover {
@@ -1171,7 +1195,7 @@ ul {
 
                         .price {
                             text-align: left;
-                            padding-left: 10px;
+                            padding-left: 20px;
 
                             strong {
                                 margin-left: 5px;
@@ -1418,13 +1442,14 @@ ul {
                         cursor: pointer;
                     }
 
-                    .active {
-                        background-color: #f10215;
-                        color: #fff;
-                    }
 
                     li:hover {
                         color: #f10215;
+                    }
+
+                    li.active {
+                        background-color: #f10215;
+                        color: #fff;
                     }
 
 
@@ -1474,6 +1499,9 @@ ul {
                             margin-bottom: 5px;
                             float: left;
                             padding-left: 42px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
                     }
 
@@ -1494,10 +1522,6 @@ ul {
                 .center {
                     width: 990px;
                     text-align: center;
-
-                    img {
-                        display: block;
-                    }
                 }
             }
         }
