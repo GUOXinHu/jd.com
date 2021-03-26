@@ -2294,6 +2294,28 @@ ul {
                 padding: 10px;
                 text-align: center;
                 font-size: 14px;
+                cursor: pointer;
+
+                i {
+                    display: block;
+                }
+            }
+
+            li:last-of-type {
+                color: #e1251b;
+
+                i {
+                    transform: rotate(90deg);
+                }
+            }
+
+            li:hover {
+                color: #fff;
+                background-color: #b6101b;
+            }
+
+            li.active {
+                color: #e1251b;
             }
         }
     }

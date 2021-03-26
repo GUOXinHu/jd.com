@@ -1,4 +1,10 @@
 @charset 'utf-8';
+@font-face {
+  font-family: 'iconfont';
+  /* project id 2421229 */
+  src: url('//at.alicdn.com/t/font_2421229_qsdjivn16dq.eot');
+  src: url('//at.alicdn.com/t/font_2421229_qsdjivn16dq.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_2421229_qsdjivn16dq.woff2') format('woff2'), url('//at.alicdn.com/t/font_2421229_qsdjivn16dq.woff') format('woff'), url('//at.alicdn.com/t/font_2421229_qsdjivn16dq.ttf') format('truetype'), url('//at.alicdn.com/t/font_2421229_qsdjivn16dq.svg#iconfont') format('svg');
+}
 * {
   margin: 0;
   padding: 0;
@@ -129,6 +135,18 @@
   width: 290px;
   padding-left: 20px;
 }
+.main .main-box .step-form .verifyBox .phonebox {
+  position: relative;
+}
+.main .main-box .step-form .verifyBox .phone-verify {
+  display: none;
+  color: #3b4;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
 .main .main-box .step-form .verifyBox .btn {
   width: 400px;
   text-align: center;
@@ -140,6 +158,55 @@
 .main .main-box .step-form .verifyBox .verifyHint {
   height: 32px;
 }
+.main .main-box .step-form .acc-msg div {
+  position: relative;
+  width: 100%;
+  height: 54px;
+  line-height: 54px;
+  border: 1px solid #ddd;
+  outline: none;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.main .main-box .step-form .acc-msg div span {
+  display: inline-block;
+  width: 100px;
+  text-align: justify;
+  text-align-last: justify;
+  color: #666;
+  padding: 0 10px;
+  border-right: 1px solid #ddd;
+}
+.main .main-box .step-form .acc-msg div input {
+  width: 300px;
+  height: 100%;
+  outline: none;
+  border: 0;
+  padding-left: 20px;
+}
+.main .main-box .step-form .acc-msg div i {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  color: #e2231a;
+  font-size: 14px;
+  cursor: default;
+}
+.main .main-box .step-form .acc-msg div i.pass {
+  color: #3b4;
+  font-weight: bold;
+  font-size: 18px;
+  position: absolute;
+  top: -2px;
+  left: 370px;
+}
+.main .main-box .step-form .acc-msg div:hover {
+  border: 1px solid #666;
+}
+.main .main-box .step-form .acc-msg div:hover span {
+  border-right: 1px solid #666;
+}
 .main .main-box .step-form .next {
   width: 100%;
   height: 54px;
@@ -150,6 +217,18 @@
   margin-top: 20px;
   cursor: pointer;
   font-size: 16px;
+  outline: 0;
+}
+.main .main-box .step-form .phone-reg {
+  display: none;
+  color: #e2231a;
+  font-size: 12px;
+  line-height: 25px;
+  user-select: none;
+}
+.main .main-box .step-form .phone-reg i {
+  font-size: 18px;
+  vertical-align: middle;
 }
 .main .main-box .step-form .next:hover {
   background-color: #c81623;

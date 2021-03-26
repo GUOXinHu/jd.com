@@ -2349,4 +2349,21 @@ ul {
   padding: 10px;
   text-align: center;
   font-size: 14px;
+  cursor: pointer;
+}
+.indexBody .elevator .elevator-list li i {
+  display: block;
+}
+.indexBody .elevator .elevator-list li:last-of-type {
+  color: #e1251b;
+}
+.indexBody .elevator .elevator-list li:last-of-type i {
+  transform: rotate(90deg);
+}
+.indexBody .elevator .elevator-list li:hover {
+  color: #fff;
+  background-color: #b6101b;
+}
+.indexBody .elevator .elevator-list li.active {
+  color: #e1251b;
 }

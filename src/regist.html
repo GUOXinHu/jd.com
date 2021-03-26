@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/regist.css">
   <link rel="stylesheet" href="./iconfont/iconfont.css">
   <script src="./js/footer.js" type="module"></script>
+  <script src="./js//regist.js" type="module"></script>
 </head>
 
 <body>
@@ -57,7 +58,12 @@
                 <option><span>中国台湾 </span>0886</option>
                 <option><span>中国香港 </span>0852</option>
               </select>
-              <input type="text" class="phoneNum" name="phoneNum" placeholder="建议使用常用手机号"><span></span>
+              <input type="text" class="phoneNum" name="phoneNum" placeholder="建议使用常用手机号">
+              <span class="iconfont phone-verify">&#xe660;</span>
+              <div class="phone-reg">
+                <i class="iconfont">&#xe615;</i>
+                <span></span>
+              </div>
             </div>
             <div class="verifyHint"></div>
           </div>
@@ -66,6 +72,29 @@
             <div class="verifyHint"></div>
           </div>
         </div>
+        <!-- 用户信息 -->
+        <!-- <div class="acc-msg">
+          <div class="username">
+            <span>用户名</span>
+            <input type="text" placeholder="请输入用户名">
+            <i class="iconfont"></i>
+          </div>
+          <div class="pwd">
+            <span>设置密码</span>
+            <input type="password" placeholder="请输入密码">
+            <i class="iconfont">&#xe615; 大小写字母、数字、$组合(至少6位)</i>
+          </div>
+          <div class="verify-pwd">
+            <span>确认密码</span>
+            <input type="password" placeholder="请再次输入密码">
+            <i class="iconfont">&#xe615; 密码输入错误,请重新输入</i>
+          </div>
+          <div class="email">
+            <span>邮箱</span>
+            <input type="email" placeholder="请输入正确的邮箱">
+            <i class="iconfont">&#xe615; 邮箱格式错误</i>
+          </div>
+        </div> -->
         <!-- 下一步 -->
         <button class="next">下一步</button>
         <!-- 其它方式注册 -->

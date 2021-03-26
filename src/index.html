@@ -302,19 +302,23 @@
         <!-- 楼梯滚动 -->
         <div class="elevator">
             <ul class="elevator-list">
-                <li>京东秒杀</li>
-                <li>特色优选</li>
+                <li title="seckill">京东秒杀</li>
+                <li title="trait">特色优选</li>
                 <li>频道广场</li>
-                <li>为你推荐</li>
-                <li>客服</li>
-                <li>反馈</li>
-                <li>顶部</li>
+                <li title="recommend">为你推荐</li>
+                <li>
+                    <i class="iconfont">&#xe643;</i>客服
+                </li>
+                <li>
+                    <i class="iconfont">&#xe64a;</i>反馈</li>
+                <li title="stick">
+                    <i class="iconfont">&#xe64c;</i>顶部</li>
             </ul>
         </div>
         <!-- 1190主体 -->
         <div class="mainBox widthBox mart10">
             <!-- 京东秒杀 -->
-            <div class="seckillBox">
+            <div class="seckillBox" id="seckill">
                 <a href="#" class="seckillCountDown">
                     <h2>京东秒杀</h2>
                     <div class="time"><b>18:00</b>点场 倒计时</div>
@@ -538,7 +542,7 @@
             </div>
 
             <!-- 特色优选 -->
-            <div class="trait">
+            <div class="trait" id="trait">
                 <!-- 每日特价 -->
                 <div class="trait1">
                     <div class="sale">
@@ -1222,7 +1226,7 @@
                 <div class="titleBox">频道广场</div>
             </div> -->
             <!-- 为你推荐 -->
-            <div class="recommendBox" if>
+            <div class="recommendBox" id="recommend">
                 <div class="titleBox">
                     <h3>为你推荐</h3>
                 </div>

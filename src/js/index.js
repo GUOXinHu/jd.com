@@ -180,9 +180,45 @@ var mySwiper = new Swiper ('.banner', {
           //将数据写到页面
           list.html(temp);
           $("img.lazy").lazyload({effect: "fadeIn"});
+          //楼梯滚动
+          $('.elevator ul li').on('click',function() {
+            let ele = $(`#${$(this).attr('title')}`);
+            if(ele.length) {
+            let top = ele.offset().top;
+            $('html').animate({
+              scrollTop:top
+            },600);
+           }else if($(this).attr('title') == 'stick'){
+             $('html').animate({
+               scrollTop:0
+             },600)
+           }
+            
+            
+          })
+          
+          // console.log($('.elevator ul li[title]'))
+          // for(let i in $('.elevator ul li[title]')) {
+          //   // console.log($($('.elevator ul li[title]')[i]).attr('title'))
+          //   console.log(1)
+          // }
+          let offsetTop_arr = [];
+          for(let i = 0;i < $('.elevator ul li[title]').length;i++) {
+            offsetTop_arr.push($(`#${$($('.elevator ul li[title]')[i]).attr('title')}`));
+          }
+          
+          $(window).on('scroll',function() {
+            let top = $(document).scrollTop();
+            if(top >= offsetTop_arr[0].offset().top && top <offsetTop_arr[1].offset().top) {
+              $(`.elevator ul li[title=${offsetTop_arr[0][0].id}]`).addClass('active').siblings().removeClass('active');
+            }else if(top >= offsetTop_arr[1].offset().top && top <offsetTop_arr[2].offset().top) {
+              $(`.elevator ul li[title=${offsetTop_arr[1][0].id}]`).addClass('active').siblings().removeClass('active');
+            }else if(top >= offsetTop_arr[2].offset().top) {
+              $(`.elevator ul li[title=${offsetTop_arr[2][0].id}]`).addClass('active').siblings().removeClass('active');
+            }
+          })
         }
       });
-
 
   })
 
