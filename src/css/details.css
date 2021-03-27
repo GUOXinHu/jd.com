@@ -104,6 +104,10 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+.topNav .navflex .navUl .navList .login {
+  display: flex;
+  align-items: center;
+}
 .topNav .navflex .navUl .navList .navLi {
   list-style: none;
   position: relative;

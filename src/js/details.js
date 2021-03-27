@@ -2,6 +2,26 @@ import {$} from './library/jquery-module.js';
 import cookie from './library/cookie.js';
 
 $(function() {
+     //导航栏用户名获取
+     let userid = cookie.get('userid');
+     let username = cookie.get('username');
+     $.get("../interface/index-user.php", {
+       'userid':userid,
+       'username':username
+     },
+       function (data) {
+         if(data) {
+           $('.topNav .navUl .login').html(username);
+         }
+       },
+       "json"
+     );
+   
+     //如果用户未登录 返回登录页
+     if(!$('.topNav .navUl .login').html() == cookie.get('username')) {
+       location.href = './login.html';
+     }
+     
     //获取商品id
     let id = location.search.split('=')[1];
     //获取页面元素
@@ -369,6 +389,51 @@ $(function() {
                 // console.log(pro_num)
             })
             //加入购物车
+            jq_join_btn.on('click',function() {
+                let id = location.search.split('=')[1];
+                let img = choose_color.children('.active').find('img').attr('src');
+                let color = choose_color.children('.active').find('span').html();
+                let type = jq_choose_version.children('.active').html();
+                let prices = parseFloat(price.html()).toFixed(2);
+                let num = jq_pro_num.val();
+                let store = jq_store.html();
+                addItem(id,img,color,type,prices,num,store);
+                location.href = './shop.html';
+                console.log(cookie.get('shop'))
+            })
+
+            function addItem(id, img,color, type, prices,num,store) {
+                let shop = cookie.get('shop');
+                let product = {
+                    id,
+                    img,
+                    color,
+                    type,
+                    prices,
+                    num,
+                    store
+                };
+                if (shop) {
+                    shop = JSON.parse(shop);
+                    // 判断当前的商品id在cookie数据中是否存在
+                    if (shop.some(el => el.id === id && el.color === color && el.type === type)) {
+                        shop.forEach(elm => {
+                            elm.id === id  && elm.color === color && elm.type === type ? elm.num = +elm.num + +num : null;
+                        });
+                    } else {
+                        shop.push(product);
+                    }
+            
+                } else { // 没有存cookie的情况
+                    shop = []; // 初始化成数组
+                    shop.push(product);
+                }
+                cookie.set('shop', JSON.stringify(shop));
+            }
+            
+            // cookie.set()
+
+
 
             //商品数量
             jq_pro_num.on('change',function() {

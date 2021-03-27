@@ -1,0 +1,709 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.shopBox {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  background-color: #fff;
+}
+.shopBox .topNav {
+  width: 100%;
+  height: 31px;
+  background-color: #e3e4e5;
+  border-bottom: 1px solid #ddd;
+}
+.shopBox .topNav .navflex {
+  height: 30px;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopBox .topNav .navflex .addressBox {
+  width: 58px;
+  height: 100%;
+  line-height: 30px;
+  border: 1px solid #e3e4e5;
+  z-index: 10;
+}
+.shopBox .topNav .navflex .addressBox .iconfont {
+  color: red;
+}
+.shopBox .topNav .navflex .addressBox .address {
+  display: inline-block;
+}
+.shopBox .topNav .navflex .addressBox .addressUl {
+  display: none;
+}
+.shopBox .topNav .navflex .addressBox:hover {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.shopBox .topNav .navflex .addressBox:hover .addressUl {
+  width: 300px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  position: absolute;
+  top: 28px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.shopBox .topNav .navflex .addressBox:hover .addressUl .active {
+  background-color: #f10215;
+}
+.shopBox .topNav .navflex .addressBox:hover .addressUl .active a {
+  color: #fff;
+}
+.shopBox .topNav .navflex .addressBox:hover .addressUl .active a:hover {
+  background-color: #f10215;
+  color: #fff;
+}
+.shopBox .topNav .navflex .addressBox:hover .addressUl li {
+  width: 50px;
+  height: 25px;
+  line-height: 25px;
+  margin: 10px 5px 0;
+  list-style: none;
+  text-align: center;
+}
+.shopBox .topNav .navflex .addressBox:hover .addressUl li a {
+  color: #999;
+  text-decoration: none;
+}
+.shopBox .topNav .navflex .addressBox:hover .addressUl li a:hover {
+  padding: 2px 5px;
+  background-color: #f4f4f4;
+  color: #e33333;
+}
+.shopBox .topNav .navflex .navUl {
+  width: 720px;
+  height: 100%;
+}
+.shopBox .topNav .navflex .navUl .navList {
+  display: flex;
+  justify-content: space-between;
+}
+.shopBox .topNav .navflex .navUl .navList .login {
+  display: flex;
+  align-items: center;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi {
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+  padding: 0 5px;
+  margin: 0 5px;
+  word-break: keep-all;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi > a {
+  line-height: 30px;
+  color: #999;
+  text-decoration: none;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-of-type(2) a,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-of-type(6) a {
+  color: #f10215;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:first-child {
+  position: relative;
+  left: 15px;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child {
+  margin-right: 10px;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi::after {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 10px;
+  background: #ccc;
+  position: absolute;
+  top: 10px;
+  right: -5px;
+}
+.shopBox .topNav .navflex .navUl .navList .navLiNo::after {
+  width: 0;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(4),
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6),
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7) {
+  position: relative;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(4) .list,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6) .list,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7) .list {
+  display: none;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(4):hover,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6):hover,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7):hover {
+  background-color: #fff;
+  position: relative;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  height: 31px;
+  z-index: 10;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list {
+  display: block;
+  width: 300px;
+  padding-top: 5px;
+  background-color: #fff;
+  position: absolute;
+  top: 30px;
+  left: -1px;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list li,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list li,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list li {
+  width: 40%;
+  list-style: none;
+  margin: 5px auto;
+  text-align: left;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list li a,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list li a,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list li a {
+  color: #999;
+  text-decoration: none;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list li a:hover,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list li a:hover,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list li a:hover {
+  color: #f10215;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list .listUp,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listUp,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list .listUp,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list .listDown,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listDown,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list .listDown {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list .listUp,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listUp,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list .listUp {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(4):hover .list .listDown,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listDown,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list .listDown {
+  margin-bottom: 15px;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list {
+  width: 200px;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listUp {
+  border: 0;
+  margin-bottom: 0;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listUp li:nth-last-child(2) {
+  width: 50%;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(6):hover .list .listUp li:nth-last-child(1) {
+  width: 30%;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list {
+  width: 150px;
+  left: -75px;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list h3 {
+  color: #666;
+  user-select: none;
+  cursor: default;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(7):hover .list .listUp {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) {
+  position: relative;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list {
+  display: none;
+  width: 1190px;
+  background-color: #fff;
+  justify-content: space-between;
+  position: absolute;
+  top: 30px;
+  left: -1036px;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul2,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul3,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul4 {
+  position: relative;
+  width: 22%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1 li,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul2 li,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul3 li,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul4 li {
+  width: 30%;
+  height: 25px;
+  list-style: none;
+  padding: 5px;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1 li h3,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul2 li h3,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul3 li h3,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul4 li h3 {
+  color: #666;
+  cursor: default;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1 li a,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul2 li a,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul3 li a,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul4 li a {
+  color: #999;
+  text-decoration: none;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1 li a:hover,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul2 li a:hover,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul3 li a:hover,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul4 li a:hover {
+  color: #f10215;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1 {
+  width: 30%;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1 li {
+  width: 25%;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul1::after,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul2::after,
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8) .list .ul3::after {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 80%;
+  background: #D6D6D6;
+  position: absolute;
+  top: 15px;
+  right: 0px;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8):hover {
+  background-color: #fff;
+  position: relative;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  height: 31px;
+  z-index: 10;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:nth-child(8):hover .list {
+  display: flex;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child .phoneUl {
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  width: 200px;
+  position: absolute;
+  top: 30px;
+  right: -10px;
+  border: 1px solid #ccc;
+  cursor: default;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi img {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #ccc;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight {
+  margin-left: 5px;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight > p {
+  color: #f10215;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os {
+  display: flex;
+  justify-content: flex-start;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os div {
+  width: 20%;
+  text-align: center;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os a {
+  text-decoration: none;
+  color: black;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os div:nth-of-type(2) a {
+  color: chartreuse;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os p {
+  text-align: center;
+  padding-right: 10px;
+  transform: scale(0.6);
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os div:nth-child(1) p,
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child .phoneUl .phoneLi .liRight .os div:nth-child(2) p {
+  position: relative;
+  left: -5px;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child:hover {
+  z-index: 10;
+}
+.shopBox .topNav .navflex .navUl .navList .navLi:last-child:hover .phoneUl {
+  display: flex;
+}
+.shopBox .widthBox {
+  width: 990px;
+  margin: 0 auto;
+}
+.shopBox .index-link {
+  position: absolute;
+  top: 5px;
+  left: 300px;
+  color: #999;
+  line-height: 20px;
+  cursor: pointer;
+}
+.shopBox .index-link i {
+  color: #333;
+}
+.shopBox .index-link:hover span {
+  color: #f10215;
+}
+.shopBox .topNav .iconfont {
+  color: #666 !important;
+}
+.shopBox .topNav .addressBox {
+  margin-left: 130px;
+}
+.shopBox .topNav .navLi a {
+  color: #999 !important;
+}
+.shopBox .topNav .navLi:hover > a {
+  color: #f10215 !important;
+}
+.shopBox .header {
+  height: 97px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.shopBox .header a {
+  width: 277px;
+  height: 50px;
+  margin: 15px 0;
+}
+.shopBox .header a img {
+  height: 42px;
+  width: 134px;
+}
+.shopBox .header .seach {
+  width: 325px;
+  height: 28px;
+  margin-top: 30px;
+  border: 2px solid #c91623;
+  display: flex;
+  justify-content: space-between;
+}
+.shopBox .header .seach input {
+  width: 270px;
+  height: 24px;
+  padding: 3px 5px;
+  border: 0;
+  outline: none;
+}
+.shopBox .header .seach button {
+  width: 52px;
+  height: 26px;
+  background-color: #c91623;
+  color: #ffF;
+  text-align: center;
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: bold;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  margin-right: -2px;
+}
+.shopBox .main .cart-filter {
+  height: 40px;
+  margin-top: 10px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #f10215;
+}
+.shopBox .main .cart-filter span {
+  font-size: 16px;
+  font-weight: bold;
+}
+.shopBox .main .cart-header {
+  height: 43px;
+  padding: 5px 0;
+  margin-bottom: 30px;
+  background: #f3f3f3;
+  border: 1px solid #e9e9e9;
+  display: flex;
+  justify-content: space-between;
+  line-height: 32px;
+  color: #434343;
+}
+.shopBox .main .cart-header .t-checkbox {
+  width: 122PX;
+  height: 25PX;
+  padding-top: 7PX;
+  padding-left: 11PX;
+  line-height: 18PX;
+}
+.shopBox .main .cart-header .t-checkbox input {
+  margin-right: 3px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.shopBox .main .cart-header .t-goods {
+  width: 208px;
+  height: 32px;
+}
+.shopBox .main .cart-header .t-props {
+  width: 170px;
+  height: 32px;
+}
+.shopBox .main .cart-header .t-price {
+  width: 170px;
+  height: 32px;
+  padding-right: 50px;
+  text-align: right;
+}
+.shopBox .main .cart-header .t-num {
+  width: 80px;
+  height: 32px;
+}
+.shopBox .main .cart-header .t-sum {
+  width: 140px;
+  height: 32px;
+  padding-right: 40px;
+}
+.shopBox .main .cart-header .t-action {
+  width: 75px;
+  height: 32px;
+}
+.shopBox .main .cart-list {
+  border: 1px solid #f1f1f1;
+  border-top: 2px solid #aaa;
+  background-color: #fff;
+  color: #434343;
+}
+.shopBox .main .cart-list .item {
+  position: relative;
+  width: 988px;
+  height: 127px;
+  padding: 10px 0px;
+  padding-left: 40px;
+  border-top: 1px solid #c5c5c5;
+  background-color: #fff4e8;
+  display: flex;
+  justify-content: space-between;
+}
+.shopBox .main .cart-list .item .p-checbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 45px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+}
+.shopBox .main .cart-list .item .p-checbox input {
+  cursor: pointer;
+}
+.shopBox .main .cart-list .item .p-goods {
+  width: 300px;
+  height: 106px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.shopBox .main .cart-list .item .p-goods img {
+  width: 82px;
+  height: 82px;
+  border: 1px solid #eee;
+  margin-right: 10px;
+}
+.shopBox .main .cart-list .item .p-goods .p-name {
+  width: 208px;
+  height: 40px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.shopBox .main .cart-list .item .p-goods .p-name:hover {
+  color: #f10215;
+}
+.shopBox .main .cart-list .item .p-props {
+  width: 150px;
+  height: 40px;
+  padding-left: 20px;
+}
+.shopBox .main .cart-list .item .p-price {
+  width: 190px;
+  height: 35px;
+  padding-right: 40px;
+  text-align: right;
+}
+.shopBox .main .cart-list .item .p-num {
+  width: 84px;
+  height: 50px;
+  padding-bottom: 10px;
+}
+.shopBox .main .cart-list .item .p-num .cart-number {
+  width: 80px;
+  height: 20px;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.shopBox .main .cart-list .item .p-num .cart-number button {
+  width: 17px;
+  height: 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border: 1px solid #cbcbcb;
+  outline: none;
+  cursor: pointer;
+}
+.shopBox .main .cart-list .item .p-num .cart-number input {
+  width: 46px;
+  height: 20px;
+  text-align: center;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  border: 1px solid #cbcbcb;
+  border-left: 0;
+  border-right: 0;
+}
+.shopBox .main .cart-list .item .p-num .store {
+  width: 80px;
+  text-align: center;
+  color: #999;
+  margin-top: 5px;
+}
+.shopBox .main .cart-list .item .p-sum {
+  width: 140px;
+  height: 30px;
+  padding-right: 40px;
+  text-align: right;
+}
+.shopBox .main .cart-list .item .p-ops {
+  width: 75px;
+  height: 50px;
+  padding-bottom: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.shopBox .main .cart-list .item .p-ops span:hover {
+  color: #f10215;
+}
+.shopBox .cart-floatbar {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+}
+.shopBox .cart-floatbar .options-box {
+  width: 988px;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  color: #666;
+}
+.shopBox .cart-floatbar .options-box .left {
+  width: 363px;
+  height: 50px;
+  display: flex;
+  justify-content: start;
+}
+.shopBox .cart-floatbar .options-box .left .select-all {
+  width: 50px;
+  height: 50px;
+  padding-left: 10px;
+}
+.shopBox .cart-floatbar .options-box .left .select-all input {
+  cursor: pointer;
+}
+.shopBox .cart-floatbar .options-box .left .remove:hover {
+  color: #f10215;
+  cursor: pointer;
+}
+.shopBox .cart-floatbar .options-box .right {
+  width: 670px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  color: #999;
+}
+.shopBox .cart-floatbar .options-box .right .price-sum {
+  display: flex;
+  justify-content: end;
+  padding-right: 20px;
+}
+.shopBox .cart-floatbar .options-box .right .price-sum .amount-sum {
+  padding-right: 20px;
+}
+.shopBox .cart-floatbar .options-box .right .price-sum .amount-sum span {
+  color: #f10215;
+  font-size: 14px;
+  font-weight: bold;
+}
+.shopBox .cart-floatbar .options-box .right .price-sum .price-show span {
+  color: #f10215;
+  font-size: 16px;
+  font-weight: bold;
+}
+.shopBox .cart-floatbar .options-box .right .btn-area button {
+  width: 94px;
+  height: 50px;
+  background: #f10215;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  font-weight: bold;
+}

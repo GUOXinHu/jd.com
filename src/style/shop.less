@@ -1,0 +1,423 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.shopBox {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    background-color: #fff;
+    @import url('./topNav.less');
+
+
+    .widthBox {
+        width: 990px;
+        margin: 0 auto;
+    }
+
+    .index-link {
+        position: absolute;
+        top: 5px;
+        left: 300px;
+        color: #999;
+        line-height: 20px;
+        cursor: pointer;
+
+        i {
+            color: #333;
+        }
+    }
+
+    .index-link:hover {
+        span {
+
+            color: #f10215;
+        }
+    }
+
+    .topNav {
+        .iconfont {
+            color: #666 !important;
+        }
+
+        .addressBox {
+            margin-left: 130px;
+        }
+
+        .navLi a {
+            color: #999 !important;
+        }
+
+        .navLi:hover {
+            >a {
+                color: #f10215 !important;
+            }
+        }
+    }
+
+    .header {
+        height: 97px;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+
+
+        a {
+            width: 277px;
+            height: 50px;
+            margin: 15px 0;
+
+            img {
+                height: 42px;
+                width: 134px;
+            }
+        }
+
+        .seach {
+            width: 325px;
+            height: 28px;
+            margin-top: 30px;
+            border: 2px solid #c91623;
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                width: 270px;
+                height: 24px;
+                padding: 3px 5px;
+                border: 0;
+                outline: none;
+            }
+
+            button {
+                width: 52px;
+                height: 26px;
+                background-color: #c91623;
+                color: #ffF;
+                text-align: center;
+                line-height: 18px;
+                font-size: 14px;
+                font-weight: bold;
+                outline: none;
+                border: 0;
+                cursor: pointer;
+                margin-right: -2px;
+            }
+        }
+
+    }
+
+    .main {
+        .cart-filter {
+            height: 40px;
+            margin-top: 10px;
+            line-height: 40px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #f10215;
+
+            span {
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+
+        .cart-header {
+            height: 43px;
+            padding: 5px 0;
+            margin-bottom: 30px;
+            background: #f3f3f3;
+            border: 1px solid #e9e9e9;
+            display: flex;
+            justify-content: space-between;
+            line-height: 32px;
+            color: #434343;
+
+            .t-checkbox {
+                width: 122PX;
+                height: 25PX;
+                padding-top: 7PX;
+                padding-left: 11PX;
+                line-height: 18PX;
+
+                input {
+                    margin-right: 3px;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+            }
+
+            .t-goods {
+                width: 208px;
+                height: 32px;
+
+            }
+
+            .t-props {
+                width: 170px;
+                height: 32px;
+            }
+
+            .t-price {
+                width: 170px;
+                height: 32px;
+                padding-right: 50px;
+                text-align: right;
+            }
+
+            .t-num {
+                width: 80px;
+                height: 32px;
+            }
+
+            .t-sum {
+                width: 140px;
+                height: 32px;
+                padding-right: 40px;
+            }
+
+            .t-action {
+                width: 75px;
+                height: 32px;
+
+            }
+        }
+
+        .cart-list {
+            border: 1px solid #f1f1f1;
+            border-top: 2px solid #aaa;
+            background-color: #fff;
+            color: #434343;
+
+            .item {
+                position: relative;
+                width: 988px;
+                height: 127px;
+                padding: 10px 0px;
+                padding-left: 40px;
+                border-top: 1px solid #c5c5c5;
+                background-color: #fff4e8;
+                display: flex;
+                justify-content: space-between;
+
+                .p-checbox {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 30px;
+                    height: 45px;
+                    padding-top: 15px;
+                    padding-bottom: 10px;
+                    margin-left: 10px;
+
+                    input {
+                        cursor: pointer;
+                    }
+                }
+
+                .p-goods {
+                    width: 300px;
+                    height: 106px;
+                    display: flex;
+                    justify-content: space-between;
+                    cursor: pointer;
+
+                    img {
+                        width: 82px;
+                        height: 82px;
+                        border: 1px solid #eee;
+                        margin-right: 10px;
+                    }
+
+                    .p-name {
+                        width: 208px;
+                        height: 40px;
+                        line-height: 20px;
+                        overflow: hidden;
+                    }
+
+                    .p-name:hover {
+                        color: #f10215;
+                    }
+                }
+
+                .p-props {
+                    width: 150px;
+                    height: 40px;
+                    padding-left: 20px;
+
+                }
+
+                .p-price {
+                    width: 190px;
+                    height: 35px;
+                    padding-right: 40px;
+                    text-align: right;
+                }
+
+                .p-num {
+                    width: 84px;
+                    height: 50px;
+                    padding-bottom: 10px;
+
+                    .cart-number {
+                        width: 80px;
+                        height: 20px;
+                        line-height: 20px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        button {
+                            width: 17px;
+                            height: 20px;
+                            text-align: center;
+                            background-color: #f1f1f1;
+                            border: 1px solid #cbcbcb;
+                            outline: none;
+                            cursor: pointer;
+                        }
+
+                        input {
+                            width: 46px;
+                            height: 20px;
+                            text-align: center;
+                            outline: none;
+                            -webkit-appearance: none;
+                            appearance: none;
+                            margin: 0;
+                            border: 1px solid #cbcbcb;
+                            border-left: 0;
+                            border-right: 0;
+                        }
+                    }
+
+                    .store {
+                        width: 80px;
+                        text-align: center;
+                        color: #999;
+                        margin-top: 5px;
+                    }
+                }
+
+                .p-sum {
+                    width: 140px;
+                    height: 30px;
+                    padding-right: 40px;
+                    text-align: right;
+                }
+
+                .p-ops {
+                    width: 75px;
+                    height: 50px;
+                    padding-bottom: 10px;
+                    margin-right: 10px;
+                    cursor: pointer;
+
+
+                    span:hover {
+                        color: #f10215;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .cart-floatbar {
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        bottom: 0;
+
+        .options-box {
+            width: 988px;
+            height: 50px;
+            line-height: 50px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            color: #666;
+
+            .left {
+                width: 363px;
+                height: 50px;
+                display: flex;
+                justify-content: start;
+
+                .select-all {
+                    width: 50px;
+                    height: 50px;
+                    padding-left: 10px;
+
+                    input {
+                        cursor: pointer;
+                    }
+                }
+
+                .remove:hover {
+                    color: #f10215;
+                    cursor: pointer;
+                }
+            }
+
+            .right {
+                width: 670px;
+                height: 50px;
+                display: flex;
+                justify-content: flex-end;
+                color: #999;
+
+                .price-sum {
+                    display: flex;
+                    justify-content: end;
+                    padding-right: 20px;
+
+                    .amount-sum {
+                        padding-right: 20px;
+
+                        span {
+                            color: #f10215;
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+                    }
+
+                    .price-show {
+                        span {
+                            color: #f10215;
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .btn-area {
+                    button {
+                        width: 94px;
+                        height: 50px;
+                        background: #f10215;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 50px;
+                        font-size: 18px;
+                        cursor: pointer;
+                        border: 0;
+                        outline: none;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

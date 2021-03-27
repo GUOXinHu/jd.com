@@ -618,6 +618,10 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+.indexBody .topNav .navflex .navUl .navList .login {
+  display: flex;
+  align-items: center;
+}
 .indexBody .topNav .navflex .navUl .navList .navLi {
   list-style: none;
   position: relative;
@@ -2037,6 +2041,7 @@ ul {
   height: 322px;
   background-color: #fff;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .indexBody .mainBox .recommendBox .product .list .item img {
   width: 150px;

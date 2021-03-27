@@ -207,6 +207,17 @@
 .main .main-box .step-form .acc-msg div:hover span {
   border-right: 1px solid #666;
 }
+.main .main-box .step-form .regist-success {
+  text-align: center;
+  font-size: 18px;
+}
+.main .main-box .step-form .regist-success a {
+  text-decoration: none;
+  color: #e2231a;
+}
+.main .main-box .step-form .regist-success a:hover {
+  color: #c81623;
+}
 .main .main-box .step-form .next {
   width: 100%;
   height: 54px;

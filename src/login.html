@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./iconfont/iconfont.css">
     <script src="./js/footer.js" type="module"></script>
+    <script src="./js//login.js" type="module"></script>
 </head>
 
 <body>
@@ -39,10 +40,10 @@
                     京东不会以任何理由要求您转账汇款，谨防诈骗。
                 </div>
                 <div class="way">
-                    <div class="ewm active">扫码登录</div>
-                    <div class="account">账户登录</div>
+                    <div class="ewm">扫码登录</div>
+                    <div class="account active">账户登录</div>
                 </div>
-                <form action="#">
+                <div class="form">
                     <!-- 扫码登录 -->
                     <div class="ewmForm">
                         <span class="iconfont"></span>
@@ -59,10 +60,11 @@
                         </div>
                     </div>
                     <div class="forget">
+                        <span class="iconfont">&#xe615;账号或密码错误,请重新输入</span>
                         <a href="#">忘记密码</a>
                     </div>
                     <button class="btn">登&emsp;录</button>
-                </form>
+                </div>
                 <!-- 其它方式登录 -->
                 <div class="bottomLink">
                     <ul class="list">

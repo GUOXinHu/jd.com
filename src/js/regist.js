@@ -94,8 +94,25 @@ $(function() {
    
                        //立即注册
                        $('.step-form .next').on('click',function() {
+                           console.log()
                            if($('.step-form .acc-msg').find('i').hasClass('pass')) {
-   
+                                $.post("../interface/regist.php", {
+                                    "username":$('.step-form .acc-msg .username input').val(),
+                                    "password":$('.step-form .acc-msg .pwd input').val(),
+                                    "phone":phoneBox.val(),
+                                    "email":$('.step-form .acc-msg .email input').val()
+                                },
+                                    function (data) {
+                                        if(data) {
+                                            $('.step-form .acc-msg').css('display','none');
+                                            $('.step-form').prepend(`<div class="regist-success">
+                                            注册成功,<a href="./login.html">请登录></a>
+                                          </div>`);
+                                            $('.step-form .next').css('display','none');
+                                            $('.step-form .step-other').css('display','none');
+                                        }
+                                    }
+                                );
                            }
                        })
                        })

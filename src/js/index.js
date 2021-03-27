@@ -1,5 +1,6 @@
 import {$} from './library/jquery-module.js';
 import './library/jquery.lazyload.js';
+import cookie from './library/cookie.js';
 
 //顶部中心轮播图
 var mySwiper = new Swiper ('.banner', {
@@ -51,6 +52,21 @@ var mySwiper = new Swiper ('.banner', {
 
   //DOM操作
   $(function() {
+      //设置用户名
+      let userid = cookie.get('userid');
+      let username = cookie.get('username');
+      $.get("../interface/index-user.php", {
+        'userid':userid,
+        'username':username
+      },
+        function (data) {
+          if(data) {
+            $('.topNav .navUl .login').html(username);
+          }
+        },
+        "json"
+      );
+
       //秒杀倒计时
       let hour,minute,second,timer;
       let time = new Date();
@@ -150,9 +166,11 @@ var mySwiper = new Swiper ('.banner', {
             let selfRun = +el.self_run ? '&nbsp;自营&nbsp;' : '';
             let plusPrice = +el.plus_price ? `¥${el.plus_price}.00` : '';
             let plusShow = plusPrice ? ' plus_show' : '';
+            // href="./details.html?id=${el.id}
+            // <a href="./details.html?id=${el.id}">
             temp += `
               <li class="item">
-                <a href="./details.html?id=${el.id}">
+              <a>
                     <img class="lazy" data-original="./img/${pricture.pro}" alt="">
                     <div class="title">
                         <span class="self-run">${selfRun}</span>
@@ -179,7 +197,19 @@ var mySwiper = new Swiper ('.banner', {
           });
           //将数据写到页面
           list.html(temp);
+          //数据懒加载
           $("img.lazy").lazyload({effect: "fadeIn"});
+          //点击商品判断用户是否登录
+          list.find('.item a').on('click',function() {
+            if(!$('.topNav .navUl .login').html() == cookie.get('username')) {
+              location.href = './login.html';
+            }else {
+              location.href = `./details.html?id=${$(this).parent().index()+1}`;
+            }
+          });
+
+
+
           //楼梯滚动
           $('.elevator ul li').on('click',function() {
             let ele = $(`#${$(this).attr('title')}`);
