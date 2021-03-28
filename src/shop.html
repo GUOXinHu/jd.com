@@ -16,10 +16,10 @@
 <body>
     <div class="shopBox">
         <!-- 京东首页 -->
-        <div href="./index.html" class="index-link">
+        <a href="./index.html" class="index-link">
             <i class="iconfont">&#xe81b;</i>
             <span>京东首页</span>
-        </div>
+        </a>
         <div class="topNav"></div>
         <div class="header widthBox">
             <a href="./index.html">
@@ -31,7 +31,7 @@
         </div>
         <div class="main widthBox">
             <div class="cart-filter">
-                全部商品 <span class="sum">100</span>
+                全部商品 <span class="sum"></span>
             </div>
             <div class="cart-header">
                 <div class="t-checkbox">
@@ -46,15 +46,19 @@
                 <div class="t-action">操作</div>
             </div>
             <ul class="cart-list">
+                <div class="empty">
+                    购物车空空如也，快去首页加点料吧...
+                    <a href="./index.html"> 首页><a></a>
+                </div>
                 <!-- <li class="item">
                     <div class="p-checbox">
                         <input type="checkbox">
                     </div>
                     <div class="p-goods">
                         <img src="./img/pro09-viewbig01.jpg" alt="">
-                        <div class="p-name">
+                        <a href="./details.html?id=" class="p-name">
                             华为 HUAWEI Mate 40 Pro麒麟9000 SoC芯片 超感知徕卡电影影像 有线无线双超级快充8GB+256GB釉白色5G全网通
-                        </div>
+                        </a>
                     </div>
                     <div class="p-props">
                         <div class="color">亮黑色</div>
@@ -87,17 +91,17 @@
             <div class="options-box widthBox">
                 <div class="left">
                     <div class="select-all">
-                        <input type="checkbox">
+                        <input type="checkbox">&nbsp;&nbsp;全选
                     </div>
                     <div class="remove">删除选中的商品</div>
                 </div>
                 <div class="right">
                     <div class="price-sum">
                         <div class="amount-sum">
-                            已选择 <span>10</span> 件商品
+                            已选择 <span>0</span> 件商品
                         </div>
                         <div class="price-show">
-                            总价：<span>¥129999.00</span>
+                            总价：<span>¥0.00</span>
                         </div>
                     </div>
                     <div class="btn-area">

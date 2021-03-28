@@ -104,8 +104,13 @@ $(function() {
                                 },
                                     function (data) {
                                         if(data) {
+                                            //步骤颜色设置成绿色
+                                            $('.step-box .step-active').prev().css('background','url(./img/reg-icon.png) no-repeat 0px -100px');
+                                            $('.step-box .step-active').next().css('background','url(./img/reg-icon.png) no-repeat 0px -129px');
+                                            $('.step-box .step-active').removeClass('step-active').nextAll(':eq(1)').addClass('step-active');
+                                            //跳转登录页
                                             $('.step-form .acc-msg').css('display','none');
-                                            $('.step-form').prepend(`<div class="regist-success">
+                                            $('.step-form').prepend(`<div class="regist-success">~
                                             注册成功,<a href="./login.html">请登录></a>
                                           </div>`);
                                             $('.step-form .next').css('display','none');

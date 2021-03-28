@@ -199,6 +199,28 @@ li {
             border-top: 2px solid #aaa;
             background-color: #fff;
             color: #434343;
+            margin-bottom: 80px;
+
+            .empty {
+                height: 127px;
+                line-height: 127px;
+                text-align: center;
+                font-size: 20px;
+                color: #666;
+                font-weight: bold;
+
+
+                a {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #666;
+                    color: #f10215;
+                }
+
+                a:hover {
+                    color: #c91623;
+                }
+            }
 
             .item {
                 position: relative;
@@ -211,7 +233,7 @@ li {
                 display: flex;
                 justify-content: space-between;
 
-                .p-checbox {
+                .p-checkbox {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -356,12 +378,13 @@ li {
                 justify-content: start;
 
                 .select-all {
-                    width: 50px;
                     height: 50px;
                     padding-left: 10px;
+                    margin-right: 20px;
 
                     input {
                         cursor: pointer;
+                        vertical-align: middle;
                     }
                 }
 
