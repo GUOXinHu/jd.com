@@ -629,6 +629,7 @@ ul {
   padding: 0 5px;
   margin: 0 5px;
   word-break: keep-all;
+  border: 1px solid transparent;
 }
 .indexBody .topNav .navflex .navUl .navList .navLi > a {
   line-height: 30px;
@@ -674,7 +675,7 @@ ul {
 .indexBody .topNav .navflex .navUl .navList .navLi:nth-child(7):hover {
   background-color: #fff;
   position: relative;
-  border: 1px solid #ccc;
+  border-color: #ccc;
   border-bottom: 0;
   height: 31px;
   z-index: 10;
@@ -836,7 +837,7 @@ ul {
 .indexBody .topNav .navflex .navUl .navList .navLi:nth-child(8):hover {
   background-color: #fff;
   position: relative;
-  border: 1px solid #ccc;
+  border-color: #ccc;
   border-bottom: 0;
   height: 31px;
   z-index: 10;
